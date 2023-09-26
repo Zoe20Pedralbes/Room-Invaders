@@ -35,25 +35,25 @@ public class ShipMovement : MonoBehaviour
     {
         if (powerButton.ReadValue<float>() > 0)
         {
-            //rb.velocity = new Vector3(actionHorizontal.ReadValue<float>() * horizontalSpeed, actionUp.ReadValue<float>() * verticalSpeed, standartSpeed * powerMultipliyerSpeed);
-            rb.MovePosition(rb.transform.position + rb.transform.forward * standartSpeed * powerMultipliyerSpeed * Time.deltaTime);
+            rb.velocity = new Vector3(actionHorizontal.ReadValue<float>() * horizontalSpeed, actionUp.ReadValue<float>() * verticalSpeed, standartSpeed * powerMultipliyerSpeed);
+            //rb.MovePosition(rb.transform.position + rb.transform.forward * standartSpeed * powerMultipliyerSpeed * Time.deltaTime);
         }
         else
         {
-            //rb.velocity = new Vector3(actionHorizontal.ReadValue<float>() * horizontalSpeed, actionUp.ReadValue<float>() * verticalSpeed, standartSpeed);
-            rb.MovePosition(rb.transform.position + rb.transform.forward * standartSpeed * Time.deltaTime);
+            rb.velocity = new Vector3(actionHorizontal.ReadValue<float>() * horizontalSpeed, actionUp.ReadValue<float>() * verticalSpeed, standartSpeed);
+            //rb.MovePosition(rb.transform.position + rb.transform.forward * standartSpeed * Time.deltaTime);
         }
 
         float up = actionUp.ReadValue<float>();
         float right = actionHorizontal.ReadValue<float>();
         float power = powerButton.ReadValue<float>();
-        Rotation(up, right);
+        //Rotation(up, right);
         
 
 
     }
 
-    private void Rotation(float pitch, float yaw)
+    /*private void Rotation(float pitch, float yaw)
     {
         float inc_pitch = pitch * maxRotationSpeed * Time.deltaTime;
         float current_pitch = rb.rotation.eulerAngles.x;
@@ -75,7 +75,7 @@ public class ShipMovement : MonoBehaviour
 
         rb.rotation = Quaternion.Euler(final_pitch, final_yaw, 0);
 
-    }
+    }*/
 
 
     private void OnEnable()
