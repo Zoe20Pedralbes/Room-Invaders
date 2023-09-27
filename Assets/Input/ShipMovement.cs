@@ -15,6 +15,7 @@ public class ShipMovement : MonoBehaviour
     public float standartSpeed = 5;
     public float powerMultipliyerSpeed = 1.5f;
     public float maxRotationSpeed;
+    private float final_roll = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class ShipMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
@@ -48,12 +49,12 @@ public class ShipMovement : MonoBehaviour
         float right = actionHorizontal.ReadValue<float>();
         float power = powerButton.ReadValue<float>();
         //Rotation(up, right);
-        
+
 
 
     }
 
-    /*private void Rotation(float pitch, float yaw)
+    private void Rotation(float pitch, float yaw)
     {
         float inc_pitch = pitch * maxRotationSpeed * Time.deltaTime;
         float current_pitch = rb.rotation.eulerAngles.x;
@@ -73,9 +74,18 @@ public class ShipMovement : MonoBehaviour
         float final_yaw = current_yaw + inc_yaw;
         final_yaw = Mathf.Clamp(final_yaw, -60, 60f);
 
-        rb.rotation = Quaternion.Euler(final_pitch, final_yaw, 0);
+        if (yaw != 0)
+        {
+            final_roll = Mathf.Lerp(final_roll, -yaw * 60f, 01f);
+        }
+        else
+        {
+            final_roll = Mathf.Lerp(final_roll, 0f, 0.3f);
+        }
 
-    }*/
+        rb.rotation = Quaternion.Euler(final_pitch, final_yaw, final_roll);
+
+    }
 
 
     private void OnEnable()
