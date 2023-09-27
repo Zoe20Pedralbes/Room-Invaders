@@ -8,7 +8,7 @@ public class ShipMovement : MonoBehaviour
     public InputActionAsset movementVerticalActions;
     private InputAction actionUp;
     private InputAction actionHorizontal;
-    //private InputAction powerButton;
+    private InputAction powerButton;
     private Rigidbody rb;
     public float verticalSpeed = 5f;
     public float horizontalSpeed = 5f;
@@ -21,19 +21,18 @@ public class ShipMovement : MonoBehaviour
     {
         actionUp = movementVerticalActions.FindActionMap("movement").FindAction("Up");
         actionHorizontal = movementVerticalActions.FindActionMap("movement").FindAction("Horizontal");
-        // powerButton = movementVerticalActions.FindActionMap("movement").FindAction("Power");
+        powerButton = movementVerticalActions.FindActionMap("movement").FindAction("Power");
         rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void FixedUpdate()
     {
-        /*
         if (powerButton.ReadValue<float>() > 0)
         {
             rb.velocity = new Vector3(actionHorizontal.ReadValue<float>() * horizontalSpeed, actionUp.ReadValue<float>() * verticalSpeed, standartSpeed * powerMultipliyerSpeed);
@@ -44,18 +43,12 @@ public class ShipMovement : MonoBehaviour
             rb.velocity = new Vector3(actionHorizontal.ReadValue<float>() * horizontalSpeed, actionUp.ReadValue<float>() * verticalSpeed, standartSpeed);
             //rb.MovePosition(rb.transform.position + rb.transform.forward * standartSpeed * Time.deltaTime);
         }
-        */
+
         float up = actionUp.ReadValue<float>();
         float right = actionHorizontal.ReadValue<float>();
-        Vector3 inputK = new Vector3(right, up, 0);
-        transform.localPosition = inputK * Time.deltaTime;
-        //rb.MovePosition(transform.position + inputK * Time.deltaTime * standartSpeed);
-        //rb.velocity = new Vector3(actionHorizontal.ReadValue<float>() * horizontalSpeed, actionUp.ReadValue<float>() * verticalSpeed, 0);
-
-
-        //float power = powerButton.ReadValue<float>();
+        float power = powerButton.ReadValue<float>();
         //Rotation(up, right);
-
+        
 
 
     }
