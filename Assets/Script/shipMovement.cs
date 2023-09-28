@@ -30,16 +30,17 @@ public class shipMovement : MonoBehaviour
         float horizontal = actionHorizontal.ReadValue<float>();
         Debug.Log(vertical + " " + horizontal);
         localMove(vertical, horizontal);
-        RotationLook(vertical, horizontal);
+        RotationLook(horizontal, vertical);
+        HorizontalLean(transform.GetChild(0), horizontal, 80, .1f);
     }
 
 
     void localMove(float vertical, float horizontal)
     {
         transform.localPosition += new Vector3(horizontal, vertical, 0) * speed * Time.deltaTime;
-        cameraPos();
+        ClampPosition();
     }
-    void cameraPos()
+    void ClampPosition()
     {
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         pos.x = Mathf.Clamp01(pos.x);
@@ -49,11 +50,17 @@ public class shipMovement : MonoBehaviour
 
     void RotationLook(float vertical, float horizontal)
     {
-        aimTarget.parent.localPosition = Vector3.zero;
+        //aimTarget.parent.position = Vector3.zero;
         aimTarget.localPosition = new Vector3(horizontal, vertical, 1);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimTarget.position), Mathf.Deg2Rad * speed);
     }
     //void HorizontalRotation(Transform target, float )
+
+    void HorizontalLean(Transform target, float axis, float leanLimit, float lerpTime)
+    {
+        Vector3 targetEulerAngels = target.localEulerAngles;
+        target.localEulerAngles = new Vector3(targetEulerAngels.x, targetEulerAngels.y, Mathf.LerpAngle(targetEulerAngels.z, -axis * leanLimit, lerpTime));
+    }
 
     /*
     void Rotation(float pitch, float yaw)
