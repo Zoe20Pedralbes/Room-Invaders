@@ -87,6 +87,33 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "shoot",
+            "id": "382aa23a-48db-4bec-a0f6-7416938a1aa9",
+            "actions": [
+                {
+                    "name": "Misil",
+                    "type": "Button",
+                    "id": "300409db-52f8-48a8-add9-d93a2b5905da",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a4777c61-b6b1-42a0-acec-cfdec1b5e103",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Misil",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
