@@ -3,19 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - eBullet
+  - pBullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - enemyBullet
   - PostProcessing
   - Not in Reflection
-  - 
+  - playerBullet
   - 
   - 
   - 
