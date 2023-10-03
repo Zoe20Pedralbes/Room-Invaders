@@ -16,25 +16,21 @@ public abstract class HealthBehaviour : MonoBehaviour
         actualHealth = maxHealth;
     }
 
-    protected void getHit()
+    protected virtual void getHit()
     {
         actualHealth--;
         checkLife();
     }
 
-    void checkLife()
+    protected virtual void checkLife()
     {
         if (actualHealth <= 0)
             Destroy(this.gameObject, destroyDelay);
     }
 
-    protected void getHit(int dmg)
-    {
-        actualHealth = actualHealth - dmg;
-        checkLife();
-    }
+    protected abstract void getHit(int dmg);
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         getHit();
     }

@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class enemyHealth : HealthBehaviour
 {
-
+    protected override void getHit(int dmg)
+    {
+        actualHealth = actualHealth - dmg;
+        checkLife();
+    }
 
     private void OnTriggerEnter(Collider other)
     {

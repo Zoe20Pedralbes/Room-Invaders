@@ -24,13 +24,13 @@ public class playerHealth : HealthBehaviour
             if (other.gameObject.TryGetComponent<damageBehaviour>(out damageBehaviour damageBehaviour))
             {
                 getHit(damageBehaviour.getDamage());
+                GameManager.gameManager.checkGame(actualHealth);
             }
         }
     }
 
-    void checkLife()
+    protected override void getHit(int dmg)
     {
-        if (actualHealth <= 0)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        actualHealth = actualHealth - dmg;
     }
 }
