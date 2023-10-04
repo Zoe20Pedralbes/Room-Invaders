@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,7 +8,6 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
     public static GameManager gameManager;
     private GameObject player;
 
@@ -56,6 +56,11 @@ public class GameManager : MonoBehaviour
     private void OnValidate()
     {
         updateScore();
+    }
+
+    private void OnEnable()
+    {
+        enemyHealth.OnEnemyDie += Score;
     }
 
 
