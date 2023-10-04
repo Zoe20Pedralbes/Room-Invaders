@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -12,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject loseGameOver, winGameOver;
-    public InputField userField;
+    public TextMeshProUGUI scoreText;
     [SerializeField]
     int _score = 0;
 
@@ -26,8 +27,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void Score() { _score++; }
-    public void Score(int score) { _score = _score + score; }
+    public void Score() { _score++; updateScore(); }
+    public void Score(int score) { _score = _score + score; updateScore(); }
     public int GetScore() { return _score; }
 
     public void checkGame(int hp)
@@ -47,6 +48,17 @@ public class GameManager : MonoBehaviour
         winGameOver.SetActive(false);
     }
 
+    void updateScore()
+    {
+        scoreText.text = "Score: " + _score;
+    }
+
+    private void OnValidate()
+    {
+        updateScore();
+    }
+
+
     private void sendInformation()
     {
         StartCoroutine(cSendInformation());
@@ -54,7 +66,7 @@ public class GameManager : MonoBehaviour
     IEnumerator cSendInformation()
     {
         WWWForm form = new WWWForm();
-        form.AddField("playerName", userField.text);
+        form.AddField("playerName", scoreText.text);
         form.AddField("score", _score);
         //UnityWebRequest www = UnityWebRequest.Get("http://roominvaders.ddns.net/extract.php");
         UnityWebRequest www = UnityWebRequest.Post("http://roominvaders.ddns.net/insert.php", form);
