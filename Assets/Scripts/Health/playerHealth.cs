@@ -5,32 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class playerHealth : HealthBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+   /* private void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+        base.Start();
+        GameManager.gameManager.setPlayer(this.gameObject);
+        actualHealth = GameManager.gameManager.getMaxLife();
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Trigger");
         if (other.gameObject.CompareTag("eBullet"))
         {
+            
             if (other.gameObject.TryGetComponent<damageBehaviour>(out damageBehaviour damageBehaviour))
             {
                 getHit(damageBehaviour.getDamage());
-                GameManager.gameManager.checkGame(actualHealth);
             }
         }
     }
 
+
+    //private void OnValidate()
+    //{
+    //    getHit(0);
+    //}
     protected override void getHit(int dmg)
     {
         actualHealth = actualHealth - dmg;
+        Debug.Log(actualHealth);
+        GameManager.gameManager?.checkGame(actualHealth);
     }
 }

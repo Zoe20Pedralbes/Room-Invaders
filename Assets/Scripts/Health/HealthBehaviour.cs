@@ -4,14 +4,13 @@ using UnityEngine;
 
 public abstract class HealthBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    protected int maxHealth;
+    public int maxHealth = 5;
     [SerializeField]
     protected int actualHealth;
     [SerializeField]
     protected float destroyDelay = 0.3f;
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         actualHealth = maxHealth;
     }
@@ -30,7 +29,7 @@ public abstract class HealthBehaviour : MonoBehaviour
 
     protected abstract void getHit(int dmg);
 
-    protected void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         getHit();
     }
