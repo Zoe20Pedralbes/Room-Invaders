@@ -14,6 +14,10 @@ public class shipShoot : MonoBehaviour
     {
         shootingAction.FindActionMap("shoot").FindAction("Misil").performed += launchMissil;
     }
+    private void OnDestroy()
+    {
+        shootingAction.FindActionMap("shoot").FindAction("Misil").performed -= launchMissil;
+    }
 
 
     void launchMissil(InputAction.CallbackContext ctx)
