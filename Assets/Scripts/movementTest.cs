@@ -56,17 +56,17 @@ public class movementTest : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimObject.position),  _speed * Time.deltaTime);
     }
 
-    void HorizontalLean(Transform target, float axis, float leanLimit, float lerpTIme)
+    void HorizontalLean(Transform target, float axis, float leanLimit, float lerpTime)
     {
         Vector3 targetEulerAngels = target.localEulerAngles;
-        target.localEulerAngles = new Vector3(targetEulerAngels.x, targetEulerAngels.y, Mathf.LerpAngle(targetEulerAngels.z, -axis * leanLimit, lerpTIme));
+        target.localEulerAngles = new Vector3(targetEulerAngels.x, targetEulerAngels.y, Mathf.LerpAngle(targetEulerAngels.z, -axis * leanLimit, lerpTime));
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(aimObject.position, .05f);
-        Gizmos.DrawSphere(aimObject.position, .015f);
+        Gizmos.DrawWireSphere(aimObject.position, .009f);
+        Gizmos.DrawSphere(aimObject.position, .001f);
     }
 
     private void OnEnable()

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2513.4902, g: 2380.4028, b: 2600.2168, a: 1}
+  m_IndirectSpecularColor: {r: 2513.372, g: 2380.2124, b: 2599.9883, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2369,7 +2369,7 @@ Transform:
   m_GameObject: {fileID: 671273853}
   m_LocalRotation: {x: 0.002560776, y: 0.68893296, z: -0.0024339994, w: 0.72481644}
   m_LocalPosition: {x: -7.5684834, y: 0.141, z: 7.1399994}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1727192670}
   - {fileID: 1886225109}
@@ -2551,7 +2551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768767829}
   m_LocalRotation: {x: 0.0025607762, y: 0.68893296, z: -0.0024339997, w: 0.72481644}
-  m_LocalPosition: {x: -7.6680255, y: 0.22759885, z: 7.134943}
+  m_LocalPosition: {x: -7.66819, y: 0.20429942, z: 7.134935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 155076984}
@@ -7296,7 +7296,7 @@ GameObject:
   - component: {fileID: 1886225105}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7508,7 +7508,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886225104}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.000000008381903, y: 0.085892424, z: -0.10027989}
+  m_LocalPosition: {x: -0.00000048149377, y: 0.12518482, z: -0.20055991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 671273855}
@@ -8177,7 +8177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7039603917288005028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.054, z: -0}
+  m_LocalPosition: {x: -0.0072, y: 0.054, z: 0.0815}
   m_LocalScale: {x: 0.01997577, y: 0.01997577, z: 0.01997577}
   m_Children:
   - {fileID: 7039603917024310854}
@@ -8260,7 +8260,7 @@ Transform:
   m_GameObject: {fileID: 7039603917969119157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.054, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 7039603917779949098}
   - {fileID: 7039603918722775309}
@@ -8281,7 +8281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementActions: {fileID: -944628639613478452, guid: 318e3056af15b7c4a95cb2f43679c287, type: 3}
-  speed: 1
+  speed: 0.4
   lookSpeed: 100
   aimObject: {fileID: 7039603917024310854}
   leanLimit: 3
