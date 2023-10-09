@@ -65,8 +65,8 @@ public class movementTest : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(aimObject.position, .5f);
-        Gizmos.DrawSphere(aimObject.position, .15f);
+        Gizmos.DrawWireSphere(aimObject.position, .05f);
+        Gizmos.DrawSphere(aimObject.position, .015f);
     }
 
     private void OnEnable()

@@ -36,8 +36,8 @@ public class shipShoot : MonoBehaviour
         Gizmos.color = Color.red;
         foreach (Transform t in spawnPoints)
         {
-            Gizmos.DrawWireSphere(t.position, 0.25f);
-            Gizmos.DrawSphere(t.position, .10f);
+            Gizmos.DrawWireSphere(t.position, 0.025f);
+            Gizmos.DrawSphere(t.position, .010f);
         }
     }
 

@@ -148,5 +148,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+    public void stopGame()
+    {
+        Application.Quit();
+    }
 
 }
