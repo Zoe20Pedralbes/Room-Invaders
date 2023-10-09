@@ -1628,11 +1628,12 @@ GameObject:
   - component: {fileID: 496394014}
   - component: {fileID: 496394013}
   - component: {fileID: 496394012}
-  - component: {fileID: 496394016}
   - component: {fileID: 496394017}
+  - component: {fileID: 496394016}
+  - component: {fileID: 496394015}
   m_Layer: 0
   m_Name: Nave
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1715,6 +1716,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496394010}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &496394015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496394010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91916293e9445d42973279922eb1a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints: []
+  bulletPrefab: {fileID: 7474014785374248067, guid: c65a67c910085a749a57284adbb00e15, type: 3}
+  shootingAction: {fileID: -944628639613478452, guid: 318e3056af15b7c4a95cb2f43679c287, type: 3}
+  indexSpawn: 0
 --- !u!114 &496394016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1722,17 +1739,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496394010}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3891bb6b57d314a42bbc75b2d1f587d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e872e80936f3ae40ad4baff5904dd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementVerticalActions: {fileID: -944628639613478452, guid: 318e3056af15b7c4a95cb2f43679c287, type: 3}
-  verticalSpeed: 30
-  horizontalSpeed: 30
-  standartSpeed: 0
-  powerMultipliyerSpeed: 1.5
-  maxRotationSpeed: 0
+  movementActions: {fileID: -944628639613478452, guid: 318e3056af15b7c4a95cb2f43679c287, type: 3}
+  speed: 10
+  lookSpeed: 10
+  aimObject: {fileID: 812123906}
+  leanLimit: 3
 --- !u!114 &496394017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1742,13 +1758,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 496394010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81f4632a43147054595741a1d97f5409, type: 3}
+  m_Script: {fileID: 11500000, guid: 1477be67ece48db48a3fced25016b336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  movementActions: {fileID: -944628639613478452, guid: 318e3056af15b7c4a95cb2f43679c287, type: 3}
-  maxRotationSpeed: 15
-  aimTarget: {fileID: 812123906}
+  maxHealth: 5
+  destroyDelay: 0.3
 --- !u!1 &538042741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,7 +2123,7 @@ GameObject:
   - component: {fileID: 721057534}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
