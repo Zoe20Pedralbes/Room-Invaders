@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/DefintiveScenes/MainMenu.unity
     guid: 3679d4a4aff537540bc7e33cd31a3416
   - enabled: 1
+    path: Assets/Scenes/DefintiveScenes/Settings.unity
+    guid: 69b6218ce6f38ab47b0f4ffa052bd9e0
+  - enabled: 1
+    path: Assets/Scenes/DefintiveScenes/rankingScene.unity
+    guid: caa8addb5de9c30448789d76104e396a
+  - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: 5a9797d4285541f4e899c0858b798c0c
   m_configObjects: {}
