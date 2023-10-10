@@ -9,7 +9,7 @@ public class Ranking : MonoBehaviour
 {
     [SerializeField]
     private GameObject container;
-    private List<Transform> list = new List<Transform>();
+    [SerializeField] private List<Transform> list = new List<Transform>();
 
     void Start()
     {
@@ -27,19 +27,22 @@ public class Ranking : MonoBehaviour
 
         string sRanking = www.downloadHandler.text;
         Player[] player = JsonHelper.FromJson<Player>(sRanking);
-        foreach (Player p in player)
-        {
-            Debug.Log("User: " + p.name + " score: " + p.score);
+        //foreach (Player p in player)
+        //{
+        //    Debug.Log("User: " + p.name + " score: " + p.score);
 
-        }
-        for (int i = 0; i < list.Count; i++)
+        //}
+        for (int i = 1; i < list.Count && i < player.Length - 1; i++)
         {
-            list[i].GetComponent<TextMeshProUGUI>().text = player[i].name+"  " + player[i].score;
+            Debug.Log(i-1 + ": " + list.Count + " " + player.Length);
+            list[i-1].GetComponent<TextMeshProUGUI>().text = player[i-1].nombre + "  " + player[i-1].score;
         }
     }
+
+    [Serializable]
     private class Player
     {
-        public string name;
+        public string nombre;
         public int score;
     }
 
