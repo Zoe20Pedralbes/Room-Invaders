@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Bullet : damageBehaviour
     public float lifeTime;
     public float speedMultiplier;
     private Vector3 velocity;
+    [SerializeField] private EventReference bulletSound;
 
     public void SetDirection(Vector3 direction)
     {
@@ -18,6 +20,7 @@ public class Bullet : damageBehaviour
     private void Start()
     {
         Debug.Log("Bala instanciada");
+        audioManager.instance.PlayOneShot(bulletSound, this.transform.position);
     }
 
     // Update is called once per frame

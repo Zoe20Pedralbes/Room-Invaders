@@ -113,6 +113,13 @@ MonoBehaviour:
   damage: 1
   lifeTime: 3
   speedMultiplier: 5
+  bulletSound:
+    Guid:
+      Data1: 2004132492
+      Data2: 1325132466
+      Data3: 1188268198
+      Data4: -1675025994
+    Path: event:/LaserShot
 --- !u!54 &-4231241236850862833
 Rigidbody:
   m_ObjectHideFlags: 0

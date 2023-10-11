@@ -5,7 +5,7 @@ using FMODUnity;
 
 public class audioManager : MonoBehaviour
 {
-    public static audioManager instance { get; private set;}
+    public static audioManager instance { get; private set; }
 
 
     private void Awake()
@@ -14,10 +14,9 @@ public class audioManager : MonoBehaviour
         {
             Debug.LogError("Hay más de 1 audioManager en la escena");
         }
-        else
-        {
-            instance = this;
-        }
+
+        instance = this;
+
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPosition)
