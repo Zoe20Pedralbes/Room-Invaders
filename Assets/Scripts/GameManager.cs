@@ -134,23 +134,4 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SettingsMenu()
-    {
-        SceneManager.LoadScene(1);
-    }
-
-    public void startGame()
-    {
-        SceneManager.LoadScene(2);
-    }
-
-    public void goMainMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
-    public void stopGame()
-    {
-        Application.Quit();
-    }
-
 }
