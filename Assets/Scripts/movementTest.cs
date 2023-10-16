@@ -16,6 +16,7 @@ public class movementTest : MonoBehaviour
     private Transform playerModel;
     [SerializeField] float leanLimit = 3.0f;
     // Start is called before the first frame update
+
     void Start()
     {
         playerModel = transform.GetChild(0);
@@ -53,7 +54,7 @@ public class movementTest : MonoBehaviour
     {
         aimObject.parent.position = Vector3.zero; 
         aimObject.localPosition = new Vector3(h, v, 1);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimObject.position),  _speed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimObject.position), Mathf.Deg2Rad * _speed * Time.deltaTime);
     }
 
     void HorizontalLean(Transform target, float axis, float leanLimit, float lerpTime)
