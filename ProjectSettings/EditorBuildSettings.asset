@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/DefintiveScenes/MainMenu.unity
-    guid: 3679d4a4aff537540bc7e33cd31a3416
+    path: Assets/0_RoomInvaders/DefintiveScenes/Main-Menu.unity
+    guid: 44a4b41e094fe664899aa9ba5308defc
   - enabled: 1
-    path: Assets/Scenes/DefintiveScenes/Settings.unity
-    guid: 69b6218ce6f38ab47b0f4ffa052bd9e0
+    path: Assets/0_RoomInvaders/DefintiveScenes/Main-Options.unity
+    guid: efe83ca4a28f10949aa71a3d25727ece
   - enabled: 1
-    path: Assets/Scenes/DefintiveScenes/rankingScene.unity
-    guid: caa8addb5de9c30448789d76104e396a
+    path: Assets/0_RoomInvaders/DefintiveScenes/Main-Scores.unity
+    guid: e8d1f8bec5cc12a498192c59d9311520
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
-    guid: 5a9797d4285541f4e899c0858b798c0c
+    path: Assets/0_RoomInvaders/DefintiveScenes/Main.unity
+    guid: 96d057b8fbcdb5142bf6c61dfbfeaeca
   m_configObjects: {}
