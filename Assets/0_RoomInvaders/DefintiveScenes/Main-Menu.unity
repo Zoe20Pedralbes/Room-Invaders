@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 3532.7148, g: 3204.6992, b: 3270.0635, a: 1}
+  m_IndirectSpecularColor: {r: 3532.9844, g: 3204.7422, b: 3269.9062, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1231,13 +1231,13 @@ MonoBehaviour:
     volumeMask: {fileID: 11700000, guid: 836429d92e1b49443b7743362fdeb1fe, type: 3}
     textureScrollingSpeed: {x: 0, y: 0, z: 0}
     textureTiling: {x: 1, y: 1, z: 1}
-    positiveFade: {x: 0.14929576, y: 0.3032967, z: 0.24863686}
-    negativeFade: {x: 0.65211266, y: 0.27912086, z: 0.29880044}
+    positiveFade: {x: 0.5393259, y: 0.6131868, z: 0.24863686}
+    negativeFade: {x: 0.4606741, y: 0, z: 0}
     m_EditorUniformFade: 0
-    m_EditorPositiveFade: {x: 0.14929576, y: 0.3032967, z: 0.24863686}
-    m_EditorNegativeFade: {x: 0.65211266, y: 0.27912086, z: 0.29880044}
+    m_EditorPositiveFade: {x: 0.5393259, y: 0.6131868, z: 0.24863686}
+    m_EditorNegativeFade: {x: 0.4606741, y: 0, z: 0}
     m_EditorAdvancedFade: 1
-    size: {x: 3.55, y: 4.55, z: 9.17}
+    size: {x: 4.45, y: 4.55, z: 9.17}
     invertFade: 0
     distanceFadeStart: 10000
     distanceFadeEnd: 10000
@@ -3088,7 +3088,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7077938747489163360, guid: 381f74f6fddd5df408ec1220edc70594, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7077938747489163360, guid: 381f74f6fddd5df408ec1220edc70594, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Name
@@ -3097,10 +3097,6 @@ PrefabInstance:
     - target: {fileID: 7077938747489163360, guid: 381f74f6fddd5df408ec1220edc70594, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[3].m_Name
       value: Fade In Start
-      objectReference: {fileID: 0}
-    - target: {fileID: 7077938747489163360, guid: 381f74f6fddd5df408ec1220edc70594, type: 3}
-      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[4].m_Name
-      value: Fade Out Start
       objectReference: {fileID: 0}
     - target: {fileID: 7077938747489163360, guid: 381f74f6fddd5df408ec1220edc70594, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
@@ -3119,10 +3115,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7077938747489163360, guid: 381f74f6fddd5df408ec1220edc70594, type: 3}
-      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[4].m_Value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7077938747489163360, guid: 381f74f6fddd5df408ec1220edc70594, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Overridden
       value: 1
       objectReference: {fileID: 0}
@@ -3132,10 +3124,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7077938747489163360, guid: 381f74f6fddd5df408ec1220edc70594, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[3].m_Overridden
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7077938747489163360, guid: 381f74f6fddd5df408ec1220edc70594, type: 3}
-      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[4].m_Overridden
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7077938747489163360, guid: 381f74f6fddd5df408ec1220edc70594, type: 3}
@@ -3542,10 +3530,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1643492940595650358, guid: e6b9a15efd29a4645a1a152038ad70a6, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b26611110c555f54da15708b038475ec, type: 2}
     - target: {fileID: 2838554857164440581, guid: e6b9a15efd29a4645a1a152038ad70a6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
