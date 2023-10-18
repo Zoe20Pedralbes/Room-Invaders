@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2510.914, g: 2464.2212, b: 2706.8335, a: 1}
+  m_IndirectSpecularColor: {r: 2510.8906, g: 2464.2588, b: 2707.0881, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 2106575682}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &75405497
 Transform:
   m_ObjectHideFlags: 19
@@ -938,6 +939,7 @@ MonoBehaviour:
   m_Script: {fileID: 2106575682}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Entries: []
 --- !u!4 &394466281
 Transform:
   m_ObjectHideFlags: 19
@@ -9423,10 +9425,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d4ee049d23b461a49a1421c90ed5600d, type: 2}
+    - target: {fileID: 5463673410382573097, guid: e6b9a15efd29a4645a1a152038ad70a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463673410382573097, guid: e6b9a15efd29a4645a1a152038ad70a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5463673410382573097, guid: e6b9a15efd29a4645a1a152038ad70a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 5565271974490336007, guid: e6b9a15efd29a4645a1a152038ad70a6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1f8d5e556f3855640a2c295f9377eae9, type: 2}
+    - target: {fileID: 5738930424526992408, guid: e6b9a15efd29a4645a1a152038ad70a6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.09151431
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738930424526992408, guid: e6b9a15efd29a4645a1a152038ad70a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.317
+      objectReference: {fileID: 0}
     - target: {fileID: 7029326334961938632, guid: e6b9a15efd29a4645a1a152038ad70a6, type: 3}
       propertyPath: m_Name
       value: Room
