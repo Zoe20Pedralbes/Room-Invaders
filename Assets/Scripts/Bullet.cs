@@ -5,13 +5,16 @@ using UnityEngine;
 
 public class Bullet : damageBehaviour
 {
-    public float lifeTime;
+    [SerializeField] private const float initialLifeTime = 2;
+    private float lifeTime;
     public float speedMultiplier;
     private Vector3 velocity;
     [SerializeField] private EventReference bulletSound;
+    private ObjectPooler pool;
 
-    public void SetDirection(Vector3 direction)
+    public void SetDirection(Vector3 direction, Transform spawnPoint)
     {
+        transform.position = spawnPoint.position;
         velocity = direction * speedMultiplier;
     }
 
@@ -19,8 +22,9 @@ public class Bullet : damageBehaviour
 
     private void Start()
     {
+        lifeTime = initialLifeTime;
         Debug.Log("Bala instanciada");
-        audioManager.instance.PlayOneShot(bulletSound, this.transform.position);
+        //audioManager.instance.PlayOneShot(bulletSound, this.transform.position);
     }
 
     // Update is called once per frame
@@ -29,7 +33,7 @@ public class Bullet : damageBehaviour
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
         transform.position += velocity * Time.deltaTime;
 
@@ -37,7 +41,16 @@ public class Bullet : damageBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(this.gameObject, 0.03f);
+        //Destroy(this.gameObject, 0.03f);
+        Debug.Log(this.tag);
+        this.pool.ToPool(this.gameObject);
+        this.gameObject.SetActive(false);
+        
+    }
+
+    public void setPool(ObjectPooler pool)
+    {
+        this.pool = pool;
     }
 
 

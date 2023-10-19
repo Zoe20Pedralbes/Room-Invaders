@@ -26,7 +26,7 @@ public class shipShoot : MonoBehaviour
         indexSpawn = (indexSpawn + 1) % spawnPoints.Count;
         //GameObject lastBullet = Instantiate(bulletPrefab, spawnPoints[indexSpawn].position, Quaternion.identity);
         GameObject lastBullet = Instantiate(bulletPrefab, spawnPoints[indexSpawn].position, Quaternion.identity);
-        lastBullet.GetComponent<Bullet>().SetDirection(transform.forward);
+        //lastBullet.GetComponent<Bullet>().SetDirection(transform.forward);
         //float shipSpeed = GetComponent<shipMovement>();
     }
 
