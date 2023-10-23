@@ -5,7 +5,7 @@ using UnityEngine;
 public class damageBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private int damage=1;
+    protected int damage=1;
 
     
 
