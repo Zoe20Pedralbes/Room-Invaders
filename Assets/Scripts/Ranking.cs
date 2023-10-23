@@ -22,7 +22,7 @@ public class Ranking : MonoBehaviour
 
     IEnumerator cGetInformation()
     {
-        UnityWebRequest www = UnityWebRequest.Get("http://roominvaders.ddns.net/extract.php");
+        UnityWebRequest www = UnityWebRequest.Get("https://roominvaders.ddns.net/extract.php");
         yield return www.SendWebRequest();
 
         string sRanking = www.downloadHandler.text;
@@ -32,7 +32,7 @@ public class Ranking : MonoBehaviour
         //    Debug.Log("User: " + p.name + " score: " + p.score);
 
         //}
-        for (int i = 1; i < list.Count && i < player.Length - 1; i++)
+        for (int i = 1; i < list.Count || i < player.Length - 1; i++)
         {
             Debug.Log(i-1 + ": " + list.Count + " " + player.Length);
             list[i-1].GetComponent<TextMeshProUGUI>().text = player[i-1].nombre + "  " + player[i-1].score;
