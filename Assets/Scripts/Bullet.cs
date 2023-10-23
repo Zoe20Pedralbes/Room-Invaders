@@ -47,10 +47,9 @@ public class Bullet : damageBehaviour
         this.gameObject.SetActive(false);
 
     }
-
-    private void OnTriggerEnter(Collider other)
+    public void setDamage(int damage)
     {
-
+        this.damage = damage;
     }
 
     public int getDamage()

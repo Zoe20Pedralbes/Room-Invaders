@@ -9,13 +9,18 @@ public class enemyMain : MonoBehaviour
     public ObjectPooler bulletPool;
     [SerializeField] private string bulletTag;
     [SerializeField] private Transform spawnPoint;
+    public bool shootBool;
     // Start is called before the first frame update
     void Start()
     {
         player = GameManager.gameManager.getPlayer();
         //StartCoroutine(coroutineShoot());
-        bulletPool = new ObjectPooler(4, bulletPrefab, bulletTag);
-        InvokeRepeating("Shoot", 1, .5f);
+        if (shootBool)
+        {
+            bulletPool = new ObjectPooler(4, bulletPrefab, bulletTag);
+            InvokeRepeating("Shoot", 1, .5f);
+        }
+        
 
     }
 
@@ -31,6 +36,7 @@ public class enemyMain : MonoBehaviour
         //bullet.gameObject.tag = bulletTag;
         Debug.Log("Shooting");
         Debug.Log(bullet.active);
+        bullet.GetComponent<Bullet>().setDamage(this.gameObject.GetComponent<damageBehaviour>().getDamage());
         bullet.GetComponent<Bullet>().SetDirection(transform.forward, GetComponentInChildren<Transform>());
     }
 
