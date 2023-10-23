@@ -23,7 +23,7 @@ public class Bullet : damageBehaviour
     private void Start()
     {
         lifeTime = initialLifeTime;
-        Debug.Log("Bala instanciada");
+        //Debug.Log("Bala instanciada");
         //audioManager.instance.PlayOneShot(bulletSound, this.transform.position);
     }
 
@@ -42,10 +42,22 @@ public class Bullet : damageBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Destroy(this.gameObject, 0.03f);
-        Debug.Log(this.tag);
+        Debug.Log("Poom");
         this.pool.ToPool(this.gameObject);
         this.gameObject.SetActive(false);
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
+
+    public int getDamage()
+    {
+        this.pool.ToPool(this.gameObject);
+        this.gameObject.SetActive(false);
+        return damage;
     }
 
     public void setPool(ObjectPooler pool)
@@ -53,5 +65,12 @@ public class Bullet : damageBehaviour
         this.pool = pool;
     }
 
-
+    private void OnEnable()
+    {
+        lifeTime = initialLifeTime;
+    }
+    private void OnDisable()
+    {
+        Debug.Log("Disable Bullet");
+    }
 }
