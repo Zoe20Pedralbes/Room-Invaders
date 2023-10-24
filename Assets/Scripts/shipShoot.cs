@@ -7,11 +7,14 @@ public class shipShoot : MonoBehaviour
 {
     public List<Transform> spawnPoints = new List<Transform>();
     public GameObject bulletPrefab;
+    public ObjectPooler bulletPool;
+    [SerializeField] private string bulletTag;
     public InputActionAsset shootingAction;
     [SerializeField] private int indexSpawn = 0;
     // Start is called before the first frame update
     void Start()
     {
+        bulletPool = new ObjectPooler(4, bulletPrefab, bulletTag);
         shootingAction.FindActionMap("shoot").FindAction("Misil").performed += launchMissil;
     }
     private void OnDestroy()
@@ -25,7 +28,10 @@ public class shipShoot : MonoBehaviour
         Debug.Log("Shot");
         indexSpawn = (indexSpawn + 1) % spawnPoints.Count;
         //GameObject lastBullet = Instantiate(bulletPrefab, spawnPoints[indexSpawn].position, Quaternion.identity);
-        GameObject lastBullet = Instantiate(bulletPrefab, spawnPoints[indexSpawn].position, Quaternion.identity);
+        GameObject bullet = bulletPool.GetObject();
+        //bullet.transform.position = spawnPoints[indexSpawn].position;
+        bullet.GetComponent<Bullet>().SetDirection(transform.forward, spawnPoints[indexSpawn]);
+        //GameObject lastBullet = Instantiate(bulletPrefab, spawnPoints[indexSpawn].position, Quaternion.identity);
         //lastBullet.GetComponent<Bullet>().SetDirection(transform.forward);
         //float shipSpeed = GetComponent<shipMovement>();
     }

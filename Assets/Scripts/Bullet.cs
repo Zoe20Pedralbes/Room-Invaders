@@ -45,12 +45,11 @@ public class Bullet : damageBehaviour
         Debug.Log("Poom");
         this.pool.ToPool(this.gameObject);
         this.gameObject.SetActive(false);
-        
-    }
 
-    private void OnTriggerEnter(Collider other)
+    }
+    public void setDamage(int damage)
     {
-        
+        this.damage = damage;
     }
 
     public int getDamage()
@@ -68,9 +67,5 @@ public class Bullet : damageBehaviour
     private void OnEnable()
     {
         lifeTime = initialLifeTime;
-    }
-    private void OnDisable()
-    {
-        Debug.Log("Disable Bullet");
     }
 }
