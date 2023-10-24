@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private int playerLife = 5;
     private GameObject loseGameOver, winGameOver;
-    public TMP_InputField scoreText;
+    public TextMeshProUGUI scoreText;
     [SerializeField]
     int _score = 0;
 

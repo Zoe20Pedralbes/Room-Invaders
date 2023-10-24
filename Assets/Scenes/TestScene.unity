@@ -950,7 +950,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545160840}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1480,6 +1480,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2121517009, guid: 42f8f7449c229a34595311c61c087be5, type: 3}
+      propertyPath: shootBool
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 248308454297291155, guid: 42f8f7449c229a34595311c61c087be5, type: 3}
       propertyPath: m_RootOrder
       value: 7
