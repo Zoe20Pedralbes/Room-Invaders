@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int playerLife = 5;
     private GameObject loseGameOver, winGameOver;
     public TextMeshProUGUI scoreText;
+    [SerializeField] private List<Animator> HealthUiAnimations;
     [SerializeField]
     int _score = 0;
 
@@ -47,7 +49,16 @@ public class GameManager : MonoBehaviour
 
     public void checkGame(int hp)
     {
-        if (hp <= 0) GameOver();
+        switch (hp)
+        {
+            case 2:
+                HealthUiAnimations[2].SetInteger("LifePoints", hp);
+                break;
+            case 1:
+                HealthUiAnimations[1].SetInteger("LifePoints", hp); break;
+            case 0:
+                HealthUiAnimations[0].SetInteger("LifePoints", hp); GameOver(); break;
+        }
     }
 
     private void GameOver()
