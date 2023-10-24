@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class enemyHealth : HealthBehaviour
 {
-    protected int enemyScore=1;
+    protected int enemyScore = 1;
     protected override void getHit(int dmg)
     {
         actualHealth = actualHealth - dmg;
@@ -16,7 +16,7 @@ public class enemyHealth : HealthBehaviour
     {
         if (actualHealth <= 0)
             OnEnemyDie.Invoke(enemyScore);
-            Destroy(this.gameObject, destroyDelay);
+        Destroy(this.gameObject, destroyDelay);
     }
 
     private void OnTriggerEnter(Collider other)

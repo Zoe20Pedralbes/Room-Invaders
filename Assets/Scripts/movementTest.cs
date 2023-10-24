@@ -15,7 +15,12 @@ public class movementTest : MonoBehaviour
     public Transform aimObject;
     private Transform playerModel;
     [SerializeField] float leanLimit = 3.0f;
-    // Start is called before the first frame update
+
+
+    private void Awake()
+    {
+        GameManager.gameManager.setPlayer(this.gameObject);
+    }
 
     void Start()
     {
