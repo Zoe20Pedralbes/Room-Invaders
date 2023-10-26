@@ -6,6 +6,7 @@ public class Bullet : damageBehaviour
 {
     public float lifeTime;
     public float speedMultiplier;
+    public GameObject explosionPrefab;
     private Vector3 velocity;
 
     public void SetDirection(Vector3 direction)
@@ -35,6 +36,7 @@ public class Bullet : damageBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(this.gameObject, 0.03f);
+        Instantiate(explosionPrefab, velocity, Quaternion.identity);
     }
 
 
