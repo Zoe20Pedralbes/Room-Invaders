@@ -33,10 +33,19 @@ public class Bullet : damageBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject, 0.03f);
-        Instantiate(explosionPrefab, velocity, Quaternion.identity);
+        if (other.gameObject.CompareTag("Player"))
+        {
+
+        }
+        else
+        {
+            Destroy(this.gameObject, 0.5f);
+            GameObject expl = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(expl, .4f);
+        }
+
     }
 
 

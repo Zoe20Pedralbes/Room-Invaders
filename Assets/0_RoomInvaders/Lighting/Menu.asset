@@ -121,7 +121,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   maxShadowDistance:
     m_OverrideState: 1
-    m_Value: 127.3
+    m_Value: 112.7
     min: 0
   directionalTransmissionMultiplier:
     m_OverrideState: 1
@@ -186,7 +186,7 @@ MonoBehaviour:
     max: 1
   radius:
     m_OverrideState: 1
-    m_Value: 2.13
+    m_Value: 2.38
     min: 0.25
     max: 5
   spatialBilateralAggressiveness:
@@ -222,7 +222,7 @@ MonoBehaviour:
     m_Value: 0
   m_MaximumRadiusInPixels:
     m_OverrideState: 1
-    m_Value: 84
+    m_Value: 184
     min: 16
     max: 256
   m_BilateralUpsample:
