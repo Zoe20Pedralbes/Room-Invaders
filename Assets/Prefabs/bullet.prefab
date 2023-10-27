@@ -4975,15 +4975,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  lifeTime: 3
   speedMultiplier: 5
   bulletSound:
     Guid:
-      Data1: 2004132492
-      Data2: 1325132466
-      Data3: 1188268198
-      Data4: -1675025994
-    Path: event:/LaserShot
+      Data1: 202311457
+      Data2: 1221682120
+      Data3: 1468047010
+      Data4: 1524051976
+    Path: event:/Shot
 --- !u!54 &-4231241236850862833
 Rigidbody:
   m_ObjectHideFlags: 0

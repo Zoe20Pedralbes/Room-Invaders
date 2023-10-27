@@ -10,6 +10,7 @@ public class EnemySpawn : MonoBehaviour
     void spawnEnemy()
     {
         enemyPrefab.SetActive(true);
+        //enemyPrefab.GetComponent<Animator>().SetFloat();
     }
 
 

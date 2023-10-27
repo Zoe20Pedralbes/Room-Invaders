@@ -24,7 +24,7 @@ public class Bullet : damageBehaviour
     {
         lifeTime = initialLifeTime;
         //Debug.Log("Bala instanciada");
-        //audioManager.instance.PlayOneShot(bulletSound, this.transform.position);
+        audioManager.AudioManager.PlayOneShot(bulletSound, this.transform.position);
     }
 
     // Update is called once per frame
@@ -67,5 +67,6 @@ public class Bullet : damageBehaviour
     private void OnEnable()
     {
         lifeTime = initialLifeTime;
+        audioManager.AudioManager.PlayOneShot(bulletSound, this.transform.position);
     }
 }
