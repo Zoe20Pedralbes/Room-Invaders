@@ -1,20 +1,16 @@
-using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : damageBehaviour
 {
-    [SerializeField] private const float initialLifeTime = 2;
-    private float lifeTime;
+    public float lifeTime;
     public float speedMultiplier;
+    public GameObject explosionPrefab;
     private Vector3 velocity;
-    [SerializeField] private EventReference bulletSound;
-    private ObjectPooler pool;
 
-    public void SetDirection(Vector3 direction, Transform spawnPoint)
+    public void SetDirection(Vector3 direction)
     {
-        transform.position = spawnPoint.position;
         velocity = direction * speedMultiplier;
     }
 
@@ -22,9 +18,7 @@ public class Bullet : damageBehaviour
 
     private void Start()
     {
-        lifeTime = initialLifeTime;
-        //Debug.Log("Bala instanciada");
-        audioManager.AudioManager.PlayOneShot(bulletSound, this.transform.position);
+        Debug.Log("Bala instanciada");
     }
 
     // Update is called once per frame
@@ -33,40 +27,26 @@ public class Bullet : damageBehaviour
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
         {
-            this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
         }
         transform.position += velocity * Time.deltaTime;
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        //Destroy(this.gameObject, 0.03f);
-        Debug.Log("Poom");
-        this.pool.ToPool(this.gameObject);
-        this.gameObject.SetActive(false);
+        if (other.gameObject.CompareTag("Player"))
+        {
+
+        }
+        else
+        {
+            Destroy(this.gameObject, 0.5f);
+            GameObject expl = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(expl, .4f);
+        }
 
     }
-    public void setDamage(int damage)
-    {
-        this.damage = damage;
-    }
 
-    public int getDamage()
-    {
-        this.pool.ToPool(this.gameObject);
-        this.gameObject.SetActive(false);
-        return damage;
-    }
 
-    public void setPool(ObjectPooler pool)
-    {
-        this.pool = pool;
-    }
-
-    private void OnEnable()
-    {
-        lifeTime = initialLifeTime;
-        audioManager.AudioManager.PlayOneShot(bulletSound, this.transform.position);
-    }
 }

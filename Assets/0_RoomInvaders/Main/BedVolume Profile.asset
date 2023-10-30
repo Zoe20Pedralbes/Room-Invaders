@@ -28,13 +28,13 @@ MonoBehaviour:
     m_Value: 0
   compensation:
     m_OverrideState: 1
-    m_Value: -0.66
+    m_Value: -1.55
   limitMin:
     m_OverrideState: 1
-    m_Value: 10.033247
+    m_Value: 12.518475
   limitMax:
     m_OverrideState: 1
-    m_Value: 15
+    m_Value: 13.920165
   curveMap:
     m_OverrideState: 0
     m_Value:
@@ -114,15 +114,15 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   adaptationMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   adaptationSpeedDarkToLight:
-    m_OverrideState: 0
-    m_Value: 1.05
+    m_OverrideState: 1
+    m_Value: 1.5
     min: 0.001
   adaptationSpeedLightToDark:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 1.5
     min: 0.001
   weightTextureMask:
     m_OverrideState: 0
