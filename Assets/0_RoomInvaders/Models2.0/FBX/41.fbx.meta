@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: 515eb4e9ab246524d80bd0012bff73b6
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 3301386654542807337
+    second: Hedra001|Hedra001|Take 001|BaseLayer
   externalObjects: {}
   materials:
     materialImportMode: 2
