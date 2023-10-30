@@ -28,7 +28,7 @@ MonoBehaviour:
     m_Value: 0
   compensation:
     m_OverrideState: 1
-    m_Value: -0.02
+    m_Value: -0.3
   limitMin:
     m_OverrideState: 1
     m_Value: 10.033247
