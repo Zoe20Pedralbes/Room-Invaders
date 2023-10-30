@@ -651,7 +651,7 @@ MonoBehaviour:
     m_Value: -0.22
   limitMin:
     m_OverrideState: 1
-    m_Value: 11.5
+    m_Value: 10.794118
   limitMax:
     m_OverrideState: 1
     m_Value: 15
@@ -749,7 +749,7 @@ MonoBehaviour:
     m_Value: {fileID: 0}
   histogramPercentages:
     m_OverrideState: 1
-    m_Value: {x: 30.353981, y: 81.15046}
+    m_Value: {x: 13.539823, y: 64.33629}
     min: 0
     max: 100
   histogramUseCurveRemapping:
