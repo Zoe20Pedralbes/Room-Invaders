@@ -11,6 +11,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Player SFX")]
     [field: SerializeField] public EventReference playerTakeOff { get; private set; }
 
+    [field: Header("Bullet SFX")]
+    [field: SerializeField] public EventReference bulletShot { get; private set; }
+
     [field: Header("Música")]
     [field: SerializeField] public EventReference playMusicLvl1 {  get; private set; }
     public static FMODEvents instance {  get; private set; }
