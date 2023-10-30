@@ -16,6 +16,11 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("Música")]
     [field: SerializeField] public EventReference playMusicLvl1 {  get; private set; }
+    [field: SerializeField] public EventReference menuMusic { get; private set; }
+
+    [field: Header("Other SFX")]
+    [field: SerializeField] public EventReference gameOverSound { get; private set; }
+
     public static FMODEvents instance {  get; private set; }
 
     private void Awake()

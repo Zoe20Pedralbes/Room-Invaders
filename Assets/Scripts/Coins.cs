@@ -6,7 +6,6 @@ using UnityEngine;
 public class Coins : MonoBehaviour
 {
     [SerializeField] private int points = 1;
-    [SerializeField] private EventReference coinSound;
 
 
     private void OnTriggerEnter(Collider other)

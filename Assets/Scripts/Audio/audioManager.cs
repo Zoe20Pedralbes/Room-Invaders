@@ -29,6 +29,10 @@ public class audioManager : MonoBehaviour
         {
             InitializeMusic(FMODEvents.instance.playMusicLvl1);
         }
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            InitializeMusic(FMODEvents.instance.menuMusic);
+        }
     }
 
     private void InitializeMusic(EventReference musicEventReference)

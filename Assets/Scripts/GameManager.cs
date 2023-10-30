@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     private GameObject loseGameOver, winGameOver;
     public TextMeshProUGUI scoreText;
     [SerializeField] private List<Animator> HealthUiAnimations;
-    [SerializeField] private EventReference GameOverSound;
     [SerializeField]
     int _score = 0;
 
@@ -66,7 +65,7 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("GameOver");
-        audioManager.AudioManager.PlayOneShot(GameOverSound, player.transform.position);
+        audioManager.AudioManager.PlayOneShot(FMODEvents.instance.gameOverSound, player.transform.position);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         // winGameOver.SetActive(false);
         // loseGameOver.SetActive(true);
