@@ -32,7 +32,7 @@ public class Ranking : MonoBehaviour
         //    Debug.Log("User: " + p.name + " score: " + p.score);
 
         //}
-        for (int i = 1; i < list.Count && i < player.Length - 1; i++)
+        for (int i = 1; i <= /*list.Count && i < player.Length - 1*/ 10; i++)  //list.count da error
         {
             Debug.Log(i-1 + ": " + list.Count + " " + player.Length);
             list[i-1].GetComponent<TextMeshProUGUI>().text = player[i-1].nombre + "  " + player[i-1].score;
