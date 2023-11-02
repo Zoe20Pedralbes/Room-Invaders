@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2511.0176, g: 2464.46, b: 2706.9736, a: 1}
+  m_IndirectSpecularColor: {r: 2511.0176, g: 2464.4604, b: 2706.9736, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -594,6 +594,7 @@ MonoBehaviour:
   player: {fileID: 0}
   playerLife: 5
   scoreText: {fileID: 983877572}
+  HealthUiAnimations: []
   _score: 0
 --- !u!4 &235586293
 Transform:
@@ -1711,6 +1712,7 @@ MonoBehaviour:
   player: {fileID: 0}
   playerLife: 5
   scoreText: {fileID: 983877572}
+  HealthUiAnimations: []
   _score: 0
 --- !u!4 &767051388
 Transform:
@@ -1722,9 +1724,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1426917599}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &768767829
 GameObject:
@@ -8445,6 +8448,91 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1426917598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1426917599}
+  - component: {fileID: 1426917600}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1426917599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426917598}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 767051388}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1426917600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426917598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 995449369224b6046ae35a4a196ef4a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <coinCollected>k__BackingField:
+    Guid:
+      Data1: 1271300437
+      Data2: 1213836256
+      Data3: -718901619
+      Data4: 422904421
+    Path: event:/Coin
+  <playerTakeOff>k__BackingField:
+    Guid:
+      Data1: -1261400890
+      Data2: 1198631299
+      Data3: -174196311
+      Data4: -2068971212
+    Path: event:/TakeOff
+  <bulletShot>k__BackingField:
+    Guid:
+      Data1: 202311457
+      Data2: 1221682120
+      Data3: 1468047010
+      Data4: 1524051976
+    Path: event:/Shot
+  <playMusicLvl1>k__BackingField:
+    Guid:
+      Data1: -1555373175
+      Data2: 1311465859
+      Data3: 2079725468
+      Data4: 541628278
+    Path: event:/MusicInGame
+  <menuMusic>k__BackingField:
+    Guid:
+      Data1: -998846238
+      Data2: 1331723152
+      Data3: -1953344101
+      Data4: -404574202
+    Path: event:/MenuMusic
+  <gameOverSound>k__BackingField:
+    Guid:
+      Data1: -1374890456
+      Data2: 1150900756
+      Data3: -1118798411
+      Data4: 118416486
+    Path: event:/GameOver
 --- !u!1 &1457384876
 GameObject:
   m_ObjectHideFlags: 1
@@ -9833,7 +9921,7 @@ Transform:
   m_Children:
   - {fileID: 1769933292}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1965380603
 GameObject:
@@ -10982,6 +11070,13 @@ MonoBehaviour:
   speed: 0.4
   lookSpeed: 4200
   aimObject: {fileID: 7039603917024310854}
+  TakeOffSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   leanLimit: 3
 --- !u!1 &7039603918722775308
 GameObject:

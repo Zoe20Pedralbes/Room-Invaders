@@ -10,26 +10,18 @@ public class enemyMain : MonoBehaviour
     [SerializeField] private string bulletTag;
     [SerializeField] private Transform spawnPoint;
     public bool shootBool;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         player = GameManager.gameManager.getPlayer();
+        //animator = GetComponent<Animator>();
         //StartCoroutine(coroutineShoot());
-        if (shootBool)
-        {
-            bulletPool = new ObjectPooler(4, bulletPrefab, bulletTag);
-            InvokeRepeating("Shoot", 1, .5f);
-        }
-        
-
     }
-
-    // Update is called once per frame
     void Update()
     {
         transform.LookAt(player.transform, Vector3.up);
     }
-
     void Shoot()
     {
         GameObject bullet = bulletPool.GetObject();
@@ -40,21 +32,15 @@ public class enemyMain : MonoBehaviour
         bullet.GetComponent<Bullet>().SetDirection(transform.forward, GetComponentInChildren<Transform>());
     }
 
+    private void OnEnable()
+    {
+        animator = GetComponent<Animator>();
+        animator.SetInteger("Move", 1);
+    }
+    void StartShooting() //Llamarse desde un evento al final de la animación de moverse.
+    {
+        bulletPool = new ObjectPooler(4, bulletPrefab, bulletTag);
+        InvokeRepeating("Shoot", 1, .5f);
+    }
 
-    /* IEnumerator coroutineShoot()
-     {
-         while (true)
-         {
-             GameObject bullet = ObjectPooler.poolInstance.GetPooledObject();
-             if (bullet != null)
-             {
-                 bullet.SetActive(true);
-             }
-             yield return new WaitForSecondsRealtime(.5f);
-
-         }
-
-
-     }
-    */
 }
