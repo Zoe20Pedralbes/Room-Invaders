@@ -1,6 +1,6 @@
 # Room Invaders
 
-Para probar una versión básica y en línia del juego puedes visitar la siguiente web https://roominvaders.ddns.net/
+Para probar una versión básica y en línea del juego, puedes visitar la siguiente web [Room Invaders](https://roominvaders.ddns.net/).
 
 # Análisis del Juego
 
@@ -45,63 +45,79 @@ Recompensaremos a los buenos jugadores con una posición en el Scoreboard.
 | ------------ | ------------------------------------- |
 | Nave Jugador | Disparar, Moverse, Turbo, Barrel Roll   |
 | Enemigos comunes | Moverse, Disparar                    |
-| Jefe final (?)    | Disparar                            |
-
-# Level Design
-
-## Nivel
-
-### Habitación de Roc
-- Es la habitación de un niño, con todo lo que ello conlleva. Al estar muy desordenada se nos da a entender que el dueño del lugar es un chico bastante problemático.
-- El Blue Beacon deberá conseguir impulso alrededor del dormitorio para llegar a la ventana, la salida que marca el punto final, aunque otros juguetes intentarán impedirle el paso.
-
-# Mapa de Controles
-
-- **Input**
-  - Acción
-  - W, A, S y D: Mover la nave alrededor de la pantalla.
-  - Espacio: Disparar.
-
-# Diseño Estético y UI
-
-- Nostalgia.
-- Realista.
-- Interfaz simple con temática de juguete (puzzle, pixel art).
-- Menú con Start, Options, Highscore y Exit.
-- Interfaz de juego con corazones para medir la vida, estilo arcade.
-- Puntuación en fuente retro con sombra.
 
 # Mood Board
 
-La lluvia de ideas giró en torno a los juguetes y cómo ambientar el juego para que el personaje jugable fuese una nave de juguete.
+La lluvia de ideas giró en torno a los juguetes y cómo ambientar el juego para que el personaje jugable fuese una nave de juguete. Imagina una nave de juguete que se encuentra atrapada en una habitación que no es su hogar. Aquí, los jugadores se embarcarán en una aventura donde tendrán que esquivar obstáculos, para ayudar a la nave de juguete a escapar. Acompáñanos mientras exploramos este concepto y descubrimos esta breve aventura.
+
+![Mood Board](URL_de_la_imagen_del_Mood_Board)
 
 # Estilo Artístico
 
-La estética sigue un estilo realista pese a la temática infantil del juego, para que el jugador se fije en los detalles que componen la habitación por donde se mueve el jugador.
+La estética sigue un estilo realista a pesar de la temática infantil del juego, para que el jugador se fije en los detalles que componen la habitación por donde se mueve el jugador.
+
+Aparte de hacer que los objetos cotidianos cobren vida y tengan personalidad, algunos puntos del estilo;
+
+- **Colores Vibrantes:** La paleta de colores será brillante y alegre, con colores vivos que resalten y aporten una sensación de diversión. Los colores se utilizarán para evocar la nostalgia de los juguetes y habitaciones de la infancia, similar a la forma en que “Toy Story” utiliza colores para producir un mundo encantador.
+
+- **Perspectiva de Niño:** Con la estética también buscamos semejarnos a la perspectiva de un niño, que los objetos en la habitación pueden parecer más grandes de lo que son en realidad. Esto genera un ambiente más cautivador.
+
+- **Iluminación Cálida:** La iluminación será suave y cálida, lo que hará que te sientas cómodo y como en casa. A través de la ventana se colará la luz de media tarde, iluminando la habitación y el recorrido del player.
+
+En resumen, una estética que se caracteriza por la atención al detalle, la calidez, la narrativa de aventura y la capacidad de dar vida a objetos inanimados de una manera carismática y atractiva. Para así atraer tanto a un público adulto como a uno más joven.
+
+![Ejemplo de Colores Vibrantes](URL_de_la_imagen_de_colores_vibrantes)
+![Ejemplo de Perspectiva de Niño](URL_de_la_imagen_de_perspectiva_de_niño)
+![Ejemplo de Iluminación Cálida](URL_de_la_imagen_de_iluminación_cálida)
 
 # Concept Art
 
-La habitación está inspirada en "Toy Story", desde la perspectiva de un niño llamado Roc, vecino del dueño de la nave.
+La habitación está inspirada en "Toy Story" y pertenece a un niño llamado Roc, vecino del dueño de la nave. Así sería un plano simplificado en vista isométrica de la distribución de los muebles y props que serán añadidos más adelante en la escena.
 
-# Diseño del Player
+![Concept Art de la Habitación](URL_del_concept_art_de_la_habitación)
 
-Las primeras versiones de la nave se pensaron con un estilo cartoon y cuadrado para poder hacerla más low poly. El modelo final se enfoca en parecer aerodinámico y ágil, como un juguete con el que un niño jugaría.
+# Diseño Players
 
-# Ubicación, Paleta de Colores, Cámara y Cinemática, Texturas, Interfaz de Usuario
+Las primeras versiones de la nave se pensaron en que fuera estilo cartoon y cuadrada para así también poder hacerla más low poly. El modelo final queríamos que estuviese más enfocado en que parecer aerodinámico y ágil, algo con lo que un niño jugaría. Las dos últimas propuestas tenían ese concepto, pero nos acabamos decantando por la más estilizada.
 
-(Describir en detalle estos elementos).
+![Diseño Inicial de la Nave](URL_de_la_imagen_del_diseño_inicial_de_la_nave)
+![Diseño Final de la Nave](URL_de_la_imagen_del_diseño_final_de_la_nave)
 
-# Logo del Juego
+# Ubicación
+
+En el juego todo transcurre en la habitación de un niño un poco travieso, llamado Roc. La habitación es una expresión de la personalidad caótica del niño, con detalles cuidadosamente diseñados que muestran un entorno donde la diversión y el desorden se fusionan. Las paredes están decoradas con papeles pintados, coloridos y llenos de dibujos garabateados. Los juguetes y los peluches se amontonan en un rincón, y hay bloques de construcción desordenados por todo el suelo. Aparte de la escala de los muebles para hacer el entorno más hostil para la nave de juguete, diminuta en comparación.
+
+# Paleta de color
+
+Como se ha mencionado, los colores vivos y un entorno cálido es lo que caracteriza el espacio.
+
+El entorno se compone por colores cálidos.
+
+![Ejemplo de Paleta de Colores](URL_de_la_imagen_de_la_paleta_de_colores)
+
+# Interfaz Usuarios
+
+[Descripción de la interfaz de usuario y elementos relacionados.]
+
+# Logo Juego
 
 ## Primera Propuesta
-El primer logo se inspiró en el nombre "Space Invaders", haciendo referencia a que un juguete se ha colado en la habitación. Es minimalista y simple, jugando con la forma de la luz que sale de la puerta entreabierta "iluminando" parte del logo.
+El primer logo se inspiró en el nombre "Space Invaders," haciendo referencia a que un juguete se ha colado en la habitación que no era. Es minimalista y simple, jugando con la forma de la luz que sale de la puerta entreabierta "iluminando" parte del logo.
+
+![Logo Primera Propuesta](URL_de_la_imagen_del_logo_primera_propuesta)
 
 ## Logo Final
-El logo final contrasta con los colores claros y apagados de la habitación. Tiene un degradado morado que va a fucsia, similar al espacio, ya que el juego trata sobre una "nave espacial". Las letras tienen relieve y efecto 3D, recordando a títulos míticos del cine de ciencia ficción, como "Regreso al Futuro", "Indiana Jones" y "Star Wars."
+El logo final, para contrastar con los colores claros y apagados de la habitación, tiene un degradado morado que va a fucsia, similar al espacio, ya que el juego trata sobre una "nave espacial." Las letras tienen relieve y efecto 3D, recordando a títulos míticos del cine de ciencia ficción, como "Regreso al Futuro," "Indiana Jones," y "Star Wars."
+
+![Logo Final](URL_de_la_imagen_del_logo_final)
 
 # Referencias
 
 - "It Takes Two"
+![It Takes Two](URL_de_la_imagen_del_juego)
 - "Toy Story"
+![Toy Story](URL_de_la_imagen_del_juego)
 - "Kingdom Hearts"
+![Kingdom Hearts](URL_de_la_imagen_del_juego)
 - "Star Fox"
+![Star Fox](URL_de_la_imagen_del_juego)
