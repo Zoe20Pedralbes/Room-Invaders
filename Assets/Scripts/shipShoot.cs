@@ -30,7 +30,9 @@ public class shipShoot : MonoBehaviour
         //GameObject lastBullet = Instantiate(bulletPrefab, spawnPoints[indexSpawn].position, Quaternion.identity);
         GameObject bullet = bulletPool.GetObject();
         //bullet.transform.position = spawnPoints[indexSpawn].position;
+        bullet.GetComponent<TrailRenderer>().enabled = false;
         bullet.GetComponent<Bullet>().SetDirection(transform.forward, spawnPoints[indexSpawn]);
+        bullet.GetComponent<TrailRenderer>().enabled = true;
         //GameObject lastBullet = Instantiate(bulletPrefab, spawnPoints[indexSpawn].position, Quaternion.identity);
         //lastBullet.GetComponent<Bullet>().SetDirection(transform.forward);
         //float shipSpeed = GetComponent<shipMovement>();

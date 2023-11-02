@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class playerHealth : HealthBehaviour
 {
-   /* private void Start()
+   private void Start()
     {
-        base.Start();
-        GameManager.gameManager.setPlayer(this.gameObject);
+        //GameManager.gameManager.setPlayer(this.gameObject);
+        maxHealth = GameManager.gameManager.getMaxLife();
         actualHealth = GameManager.gameManager.getMaxLife();
-    }*/
+    }
 
     private void OnTriggerEnter(Collider other)
     {

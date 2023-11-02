@@ -12,6 +12,7 @@ public class Bullet : damageBehaviour
     private Vector3 velocity;
     [SerializeField] private EventReference bulletSound;
     private ObjectPooler pool;
+    private Transform spawnPoint;
     [SerializeField] private int bulletDamage = 1;
 
 
@@ -27,7 +28,8 @@ public class Bullet : damageBehaviour
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0)
         {
-            this.gameObject.SetActive(false);
+            pool.ToPool(this.gameObject);
+            //this.gameObject.SetActive(false);
         }
         transform.position += velocity * Time.deltaTime;
 
@@ -45,6 +47,7 @@ public class Bullet : damageBehaviour
     {
         transform.position = spawnPoint.position;
         velocity = direction * speedMultiplier;
+        this.spawnPoint = spawnPoint;
     }
 
     public void setDamage(int damage)
@@ -64,7 +67,13 @@ public class Bullet : damageBehaviour
     private void OnEnable()
     {
         lifeTime = initialLifeTime;
-        audioManager.AudioManager.PlayOneShot(bulletSound, this.transform.position);
+        //audioManager.AudioManager.PlayOneShot(bulletSound, this.transform.position);
+    }
+
+    private void OnDisable()
+    {
+        this.GetComponent<TrailRenderer>().enabled = false;
+        this.transform.position = spawnPoint.position;
     }
 
 }

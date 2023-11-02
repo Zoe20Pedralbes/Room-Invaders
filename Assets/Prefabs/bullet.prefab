@@ -112,9 +112,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  lifeTime: 3
   speedMultiplier: 5
   explosionPrefab: {fileID: 7549430752707040364, guid: 31ede3a23f784ac43b63c54b94dddf74, type: 3}
+  bulletSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  bulletDamage: 1
 --- !u!54 &-4231241236850862833
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -139,7 +146,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7474014785374248067}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

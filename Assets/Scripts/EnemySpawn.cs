@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject enemyPrefab1;
+
     [SerializeField] private Transform spawnPoint;
 
     void spawnEnemy()
     {
-        enemyPrefab.SetActive(true);
+        enemyPrefab1.SetActive(true);
         //enemyPrefab.GetComponent<Animator>().SetFloat();
     }
 
