@@ -8,9 +8,12 @@ public class enemyMain : MonoBehaviour
     public GameObject bulletPrefab;
     public ObjectPooler bulletPool;
     [SerializeField] private string bulletTag;
+    [SerializeField] private float waitTimeToLeave;
     [SerializeField] private Transform spawnPoint;
     public bool shootBool;
     private Animator animator;
+    [SerializeField] private float startShootingTime = 0.5f, repeatingTime = 0.8f;
+    private bool startShooting = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,17 @@ public class enemyMain : MonoBehaviour
     void Update()
     {
         transform.LookAt(player.transform, Vector3.up);
+        if (startShooting)
+        {
+            waitTimeToLeave -= Time.deltaTime;
+        }
+        if (waitTimeToLeave < 0 )
+            endShoot();
+    }
+    public void startShoot()
+    {
+        InvokeRepeating("Shoot", startShootingTime, repeatingTime);
+        startShooting=true;
     }
     void Shoot()
     {
@@ -30,6 +44,11 @@ public class enemyMain : MonoBehaviour
         Debug.Log(bullet.active);
         bullet.GetComponent<Bullet>().setDamage(this.gameObject.GetComponent<damageBehaviour>().getDamage());
         bullet.GetComponent<Bullet>().SetDirection(transform.forward, GetComponentInChildren<Transform>());
+    }
+    public void endShoot()
+    {
+        CancelInvoke();
+        animator.SetInteger("Move", 2);
     }
 
     private void OnEnable()

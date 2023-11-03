@@ -15,7 +15,6 @@ public class movementTest : MonoBehaviour
     public float lookSpeed = 10;
     public Transform aimObject;
     private Transform playerModel;
-    [SerializeField] private EventReference TakeOffSound;
     [SerializeField] float leanLimit = 3.0f;
 
 
@@ -29,7 +28,7 @@ public class movementTest : MonoBehaviour
         playerModel = transform.GetChild(0);
         actionUp = movementActions.FindActionMap("movement").FindAction("Up");
         actionHorizontal = movementActions.FindActionMap("movement").FindAction("Horizontal");
-        audioManager.AudioManager.PlayOneShot(TakeOffSound, transform.position);
+        audioManager.AudioManager.PlayOneShot(FMODEvents.instance.playerTakeOff, transform.position);
 
     }
 

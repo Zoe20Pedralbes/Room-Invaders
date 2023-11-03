@@ -43,6 +43,7 @@ public class ObjectPooler
         GameObject go = GameObject.Instantiate(prefab, new Vector3(0, 0, 0), Quaternion.identity);
         go.tag = this.tag;
         go.SetActive(true);
+        go.GetComponent<Bullet>().setPool(this);
         objectPool.Add(go);
         return go;
     }
