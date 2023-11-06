@@ -49,7 +49,7 @@ Recompensaremos a los buenos jugadores con una posición en el Scoreboard.
 
 La lluvia de ideas giró en torno a los juguetes y cómo ambientar el juego para que el personaje jugable fuese una nave de juguete. Imagina una nave de juguete que se encuentra atrapada en una habitación que no es su hogar. Aquí, los jugadores se embarcarán en una aventura donde tendrán que esquivar obstáculos, para ayudar a la nave de juguete a escapar. Acompáñanos mientras exploramos este concepto y descubrimos esta breve aventura.
 
-![Mood Board](URL_de_la_imagen_del_Mood_Board)
+![Mood Board](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Moodboard.png)
 
 # Estilo Artístico
 
@@ -69,13 +69,16 @@ En resumen, una estética que se caracteriza por la atención al detalle, la cal
 
 La habitación está inspirada en "Toy Story" y pertenece a un niño llamado Roc, vecino del dueño de la nave. Así sería un plano simplificado en vista isométrica de la distribución de los muebles y props que serán añadidos más adelante en la escena.
 
-![Concept Art de la Habitación](URL_del_concept_art_de_la_habitación)
+![Concept Art de la Habitación 1](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Concept%20habitaci%C3%B3n%201.png)
+![Concept Art de la Habitación 2](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Concept%20habitaci%C3%B3n%202.png)
 
 # Diseño Players
 
 Las primeras versiones de la nave se pensaron en que fuera estilo cartoon y cuadrada para así también poder hacerla más low poly. El modelo final queríamos que estuviese más enfocado en que parecer aerodinámico y ágil, algo con lo que un niño jugaría. Las dos últimas propuestas tenían ese concepto, pero nos acabamos decantando por la más estilizada.
 
-![Diseño Inicial de la Nave](URL_de_la_imagen_del_diseño_inicial_de_la_nave)
+![Diseño Inicial de la Nave](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Concept%20inicial%20nave.png)
+(Primeros diseños del Blue Beacon)
+
 ![Diseño Final de la Nave](URL_de_la_imagen_del_diseño_final_de_la_nave)
 
 # Ubicación
@@ -86,7 +89,7 @@ En el juego todo transcurre en la habitación de un niño un poco travieso, llam
 
 El entorno se compone por colores cálidos.
 
-![Ejemplo de Paleta de Colores](URL_de_la_imagen_de_la_paleta_de_colores)
+![Ejemplo de Paleta de Colores](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Paleta%20de%20colores.png)
 
 # Interfaz Usuarios
 
@@ -101,20 +104,24 @@ El entorno se compone por colores cálidos.
 ## Primera Propuesta
 El primer logo se inspiró en el nombre "Space Invaders," haciendo referencia a que un juguete se ha colado en la habitación que no era. Es minimalista y simple, jugando con la forma de la luz que sale de la puerta entreabierta "iluminando" parte del logo.
 
-![Logo Primera Propuesta](URL_de_la_imagen_del_logo_primera_propuesta)
+![Logo Primera Propuesta](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Primeros%20logos.png)
 
 ## Logo Final
 El logo final, para contrastar con los colores claros y apagados de la habitación, tiene un degradado morado que va a fucsia, similar al espacio, ya que el juego trata sobre una "nave espacial." Las letras tienen relieve y efecto 3D, recordando a títulos míticos del cine de ciencia ficción, como "Regreso al Futuro," "Indiana Jones," y "Star Wars."
 
-![Logo Final](URL_de_la_imagen_del_logo_final)
+![Logo Final](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Titulo.png)
 
 # Referencias
 
 - "It Takes Two"
-![It Takes Two](URL_de_la_imagen_del_juego)
+
+![It Takes Two](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Referencia%20It%20Takes%20Two.jpg)
 - "Toy Story"
-![Toy Story](URL_de_la_imagen_del_juego)
+
+![Toy Story](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Referencia%20Toy%20Story.png)
 - "Kingdom Hearts"
-![Kingdom Hearts](URL_de_la_imagen_del_juego)
+
+![Kingdom Hearts](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Referencia%20Kindom%20Hearts.png)
 - "Star Fox"
-![Star Fox](URL_de_la_imagen_del_juego)
+
+![Star Fox](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Referencia%20Starfox.png)
