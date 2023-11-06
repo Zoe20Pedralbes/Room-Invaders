@@ -15,7 +15,6 @@ public class movementTest : MonoBehaviour
     public float lookSpeed = 10;
     public Transform aimObject;
     private Transform playerModel;
-    [SerializeField] private EventReference TakeOffSound;
     [SerializeField] float leanLimit = 3.0f;
 
 
@@ -29,7 +28,7 @@ public class movementTest : MonoBehaviour
         playerModel = transform.GetChild(0);
         actionUp = movementActions.FindActionMap("movement").FindAction("Up");
         actionHorizontal = movementActions.FindActionMap("movement").FindAction("Horizontal");
-        audioManager.AudioManager.PlayOneShot(TakeOffSound, transform.position);
+        audioManager.AudioManager.PlayOneShot(FMODEvents.instance.playerTakeOff, transform.position);
 
     }
 
@@ -39,8 +38,8 @@ public class movementTest : MonoBehaviour
         float vertical = actionUp.ReadValue<float>();
         float horizontal = actionHorizontal.ReadValue<float>();
         LocalMove(horizontal, vertical, speed);
-        RotationLook(horizontal, vertical, lookSpeed);
-        HorizontalLean(playerModel, horizontal, leanLimit, .1f);
+        //RotationLook(horizontal, vertical, lookSpeed);
+        //HorizontalLean(playerModel, horizontal, leanLimit, .1f);
     }
 
     void LocalMove(float x, float y, float _speed)
@@ -52,22 +51,22 @@ public class movementTest : MonoBehaviour
     void ClampPosition()
     {
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
-        pos.x = Mathf.Clamp01(pos.x);
-        pos.y = Mathf.Clamp01(pos.y);
+        pos.x = Mathf.Clamp(pos.x, 0.33f, 0.66f);//Mathf.Clamp01(pos.x);
+        pos.y = Mathf.Clamp(pos.y, 0.33f, 0.66f);//Mathf.Clamp01(pos.y);
         transform.position = Camera.main.ViewportToWorldPoint(pos);
     }
 
     void RotationLook(float h, float v, float _speed)
     {
-        aimObject.parent.position = Vector3.zero; 
-        aimObject.localPosition = new Vector3(h, v, 1);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimObject.position), Mathf.Deg2Rad * _speed * Time.deltaTime);
+        //aimObject.parent.position = Vector3.zero; 
+        //aimObject.localPosition = new Vector3(h, v, 1);
+        //transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimObject.position), Mathf.Deg2Rad * _speed * Time.deltaTime);
     }
 
     void HorizontalLean(Transform target, float axis, float leanLimit, float lerpTime)
     {
-        Vector3 targetEulerAngels = target.localEulerAngles;
-        target.localEulerAngles = new Vector3(targetEulerAngels.x, targetEulerAngels.y, Mathf.LerpAngle(targetEulerAngels.z, -axis * leanLimit, lerpTime));
+        //Vector3 targetEulerAngels = target.localEulerAngles;
+        //target.localEulerAngles = new Vector3(targetEulerAngels.x, targetEulerAngels.y, Mathf.LerpAngle(targetEulerAngels.z, -axis * leanLimit, lerpTime));
     }
 
     private void OnDrawGizmos()

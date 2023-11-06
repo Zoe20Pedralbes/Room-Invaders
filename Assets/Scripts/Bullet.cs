@@ -10,8 +10,7 @@ public class Bullet : damageBehaviour
     public float speedMultiplier;
     public GameObject explosionPrefab;
     private Vector3 velocity;
-    [SerializeField] private EventReference bulletSound;
-    private ObjectPooler pool;
+    [SerializeField]private ObjectPooler pool;
     private Transform spawnPoint;
     [SerializeField] private int bulletDamage = 1;
 
@@ -67,7 +66,7 @@ public class Bullet : damageBehaviour
     private void OnEnable()
     {
         lifeTime = initialLifeTime;
-        //audioManager.AudioManager.PlayOneShot(bulletSound, this.transform.position);
+        audioManager.AudioManager.PlayOneShot(FMODEvents.instance.bulletShot, this.transform.position);
     }
 
     private void OnDisable()

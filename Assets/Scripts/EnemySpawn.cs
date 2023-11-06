@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    public GameObject enemyPrefab1;
-
-    [SerializeField] private Transform spawnPoint;
+    public List<GameObject> enemies;
+    [SerializeField] private List<Transform> spawnPoint;
 
     void spawnEnemy()
     {
-        enemyPrefab1.SetActive(true);
-        //enemyPrefab.GetComponent<Animator>().SetFloat();
+        for(int i = 0; i < enemies.Count; i++)
+        {
+            enemies[i].SetActive(true);
+            enemies[i].transform.position = spawnPoint[i].position;
+        }
     }
 
 

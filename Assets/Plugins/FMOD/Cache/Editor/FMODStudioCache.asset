@@ -143,7 +143,7 @@ MonoBehaviour:
   Path: D:/Usuaris/argo/Documents/RoomInvadersFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638342948475626134
+  lastModified: 638346262521171274
   FileSizes:
   - Name: Desktop
     Value: 3807584
@@ -206,7 +206,7 @@ MonoBehaviour:
   - {fileID: -1303188686716847066}
   StringsBanks:
   - {fileID: 2870525468428854756}
-  cacheTime: 638342948475636098
+  cacheTime: 638346262521181743
   cacheVersion: 131608
 --- !u!114 &1157415426063914232
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   Path: D:/Usuaris/argo/Documents/RoomInvadersFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638342948475636098
+  lastModified: 638346262521181743
   FileSizes:
   - Name: Desktop
     Value: 1150
