@@ -1,6 +1,6 @@
 # Room Invaders
 
-Para probar una versión básica y en línea del juego, puedes visitar la siguiente web [Room Invaders](https://roominvaders.ddns.net/).
+Para probar una versión básica y en línea del juego, puedes visitar la siguiente web https://roominvaders.ddns.net/.
 
 # Análisis del Juego
 
@@ -28,7 +28,6 @@ La historia de Room Invaders se centra en el Blue Beacon, una nave de juguete qu
 | ------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | El Blue Beacon | Jugador principal, un juguete extraviado que busca volver a su casa con su dueño original. | - Puede volar y disparar. - Su forma es aerodinámica, recordando a una flecha. - Es la nave más ágil en el mercado. Su color azul simboliza la libertad, elemento que se busca en el gameplay. |
 | Combatientes  | Juguetes del niño de la casa que quieren evitar que el Blue Beacon se escape.               | - Son parecidos al Blue Beacon, aunque con un color distinto. Tienen pinta de estar muy usados. - Su movimiento es más tosco debido al uso y la edad. |
-| Tren          | Un juguete de Roc que controla el suelo de la habitación y lleva torretas para disparar al Blue Beacon siempre que esté al alcance. | - Debe ir por un raíl y no puede molestar al Beacon en todo su escape. Aunque sin embargo, lo haría si pudiera. |
 
 # Gameplay
 
@@ -43,8 +42,8 @@ Recompensaremos a los buenos jugadores con una posición en el Scoreboard.
 ### Estadísticas de personajes
 | Personaje   | Movement Abilities / Actions Available |
 | ------------ | ------------------------------------- |
-| Nave Jugador | Disparar, Moverse, Turbo, Barrel Roll   |
-| Enemigos comunes | Moverse, Disparar                    |
+| Nave Jugador | Disparar, Moverse |
+| Enemigos comunes | Disparar |
 
 # Mood Board
 
@@ -60,15 +59,11 @@ Aparte de hacer que los objetos cotidianos cobren vida y tengan personalidad, al
 
 - **Colores Vibrantes:** La paleta de colores será brillante y alegre, con colores vivos que resalten y aporten una sensación de diversión. Los colores se utilizarán para evocar la nostalgia de los juguetes y habitaciones de la infancia, similar a la forma en que “Toy Story” utiliza colores para producir un mundo encantador.
 
-- **Perspectiva de Niño:** Con la estética también buscamos semejarnos a la perspectiva de un niño, que los objetos en la habitación pueden parecer más grandes de lo que son en realidad. Esto genera un ambiente más cautivador.
-
 - **Iluminación Cálida:** La iluminación será suave y cálida, lo que hará que te sientas cómodo y como en casa. A través de la ventana se colará la luz de media tarde, iluminando la habitación y el recorrido del player.
 
 En resumen, una estética que se caracteriza por la atención al detalle, la calidez, la narrativa de aventura y la capacidad de dar vida a objetos inanimados de una manera carismática y atractiva. Para así atraer tanto a un público adulto como a uno más joven.
 
-![Ejemplo de Colores Vibrantes](URL_de_la_imagen_de_colores_vibrantes)
-![Ejemplo de Perspectiva de Niño](URL_de_la_imagen_de_perspectiva_de_niño)
-![Ejemplo de Iluminación Cálida](URL_de_la_imagen_de_iluminación_cálida)
+![Imagen de la habitación](URL_de_la_imagen_de_iluminación_cálida)
 
 # Concept Art
 
@@ -85,11 +80,9 @@ Las primeras versiones de la nave se pensaron en que fuera estilo cartoon y cuad
 
 # Ubicación
 
-En el juego todo transcurre en la habitación de un niño un poco travieso, llamado Roc. La habitación es una expresión de la personalidad caótica del niño, con detalles cuidadosamente diseñados que muestran un entorno donde la diversión y el desorden se fusionan. Las paredes están decoradas con papeles pintados, coloridos y llenos de dibujos garabateados. Los juguetes y los peluches se amontonan en un rincón, y hay bloques de construcción desordenados por todo el suelo. Aparte de la escala de los muebles para hacer el entorno más hostil para la nave de juguete, diminuta en comparación.
+En el juego todo transcurre en la habitación de un niño un poco travieso, llamado Roc. La habitación es una expresión de la personalidad caótica del niño, con detalles cuidadosamente diseñados que muestran un entorno donde la diversión y el desorden se fusionan. 
 
 # Paleta de color
-
-Como se ha mencionado, los colores vivos y un entorno cálido es lo que caracteriza el espacio.
 
 El entorno se compone por colores cálidos.
 
@@ -97,7 +90,11 @@ El entorno se compone por colores cálidos.
 
 # Interfaz Usuarios
 
-[Descripción de la interfaz de usuario y elementos relacionados.]
+  -Interfaz simple
+	-Con temática de juguete (Puzzle, pixel art)
+	-Menú con Start, Options, Highscore y Exit
+	-Interficie de juego con corazones para medir la vida, estilo arcade
+	-Puntuación en fuente retro, con sombra
 
 # Logo Juego
 
