@@ -26,8 +26,8 @@ La historia de Room Invaders se centra en el Blue Beacon, una nave de juguete qu
 
 | Personaje     | Descripción                                                                               | Características                                       |
 | ------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| El Blue Beacon | Jugador principal, un juguete extraviado que busca volver a su casa con su dueño original. | - Puede volar y disparar. - Su forma es aerodinámica, recordando a una flecha. - Es la nave más ágil en el mercado. Su color azul simboliza la libertad, elemento que se busca en el gameplay. |
-| Combatientes  | Juguetes del niño de la casa que quieren evitar que el Blue Beacon se escape.               | - Son parecidos al Blue Beacon, aunque con un color distinto. Tienen pinta de estar muy usados. - Su movimiento es más tosco debido al uso y la edad. |
+| El Blue Beacon ![Mood Board](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Render%20nave.png)| Jugador principal, un juguete extraviado que busca volver a su casa con su dueño original. | - Puede volar y disparar. - Su forma es aerodinámica, recordando a una flecha. - Es la nave más ágil en el mercado. Su color azul simboliza la libertad, elemento que se busca en el gameplay. |
+| Combatientes ![Mood Board](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Render%20enemigo.png) | Juguetes del niño de la casa que quieren evitar que el Blue Beacon se escape.               | - Son parecidos al Blue Beacon, aunque con un color distinto. Tienen pinta de estar muy usados. - Su movimiento es más tosco debido al uso y la edad. |
 
 # Gameplay
 
@@ -79,7 +79,8 @@ Las primeras versiones de la nave se pensaron en que fuera estilo cartoon y cuad
 ![Diseño Inicial de la Nave](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/Concept%20inicial%20nave.png)
 (Primeros diseños del Blue Beacon)
 
-![Diseño Final de la Nave](URL_de_la_imagen_del_diseño_final_de_la_nave)
+![Diseño Final de la Nave](https://raw.githubusercontent.com/Zoe20Pedralbes/Room-Invaders/main/wikiRoomInvaders/site/img/CONCEPT%20NAVE.png)
+(Concept art final del Blue Beacon)
 
 # Ubicación
 
