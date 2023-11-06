@@ -293,7 +293,7 @@ Material:
     - _AORemapMax1: 1
     - _AORemapMax2: 1
     - _AORemapMax3: 1
-    - _AORemapMin: 0
+    - _AORemapMin: 0.94196355
     - _AORemapMin0: 0
     - _AORemapMin1: 0
     - _AORemapMin2: 0
@@ -431,7 +431,7 @@ Material:
     - _Metallic1: 0
     - _Metallic2: 0
     - _Metallic3: 0
-    - _MetallicRemapMax: 1
+    - _MetallicRemapMax: 0
     - _MetallicRemapMax0: 1
     - _MetallicRemapMax1: 1
     - _MetallicRemapMax2: 1
@@ -471,12 +471,12 @@ Material:
     - _Smoothness1: 0.5
     - _Smoothness2: 0.5
     - _Smoothness3: 0.5
-    - _SmoothnessRemapMax: 1
+    - _SmoothnessRemapMax: 0.19393843
     - _SmoothnessRemapMax0: 1
     - _SmoothnessRemapMax1: 1
     - _SmoothnessRemapMax2: 1
     - _SmoothnessRemapMax3: 1
-    - _SmoothnessRemapMin: 0
+    - _SmoothnessRemapMin: 0.10365954
     - _SmoothnessRemapMin0: 0
     - _SmoothnessRemapMin1: 0
     - _SmoothnessRemapMin2: 0

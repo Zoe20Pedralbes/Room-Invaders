@@ -51,8 +51,8 @@ public class movementTest : MonoBehaviour
     void ClampPosition()
     {
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
-        pos.x = Mathf.Clamp(pos.x, 0.33f, 0.66f);//Mathf.Clamp01(pos.x);
-        pos.y = Mathf.Clamp(pos.y, 0.33f, 0.66f);//Mathf.Clamp01(pos.y);
+        pos.x = Mathf.Clamp(pos.x, 0.1f, 0.9f);//Mathf.Clamp01(pos.x);
+        pos.y = Mathf.Clamp(pos.y, 0.1f, 0.9f);//Mathf.Clamp01(pos.y);
         transform.position = Camera.main.ViewportToWorldPoint(pos);
     }
 
