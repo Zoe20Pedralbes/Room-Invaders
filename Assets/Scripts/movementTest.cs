@@ -16,6 +16,7 @@ public class movementTest : MonoBehaviour
     public Transform aimObject;
     private Transform playerModel;
     [SerializeField] float leanLimit = 3.0f;
+    public Vector3 playerOffset = Vector3.zero;
 
 
     private void Awake()
@@ -44,15 +45,18 @@ public class movementTest : MonoBehaviour
 
     void LocalMove(float x, float y, float _speed)
     {
-        transform.localPosition += new Vector3(x, y, 0) * _speed * Time.deltaTime;
+        playerOffset = new Vector3(x, y, 0) * _speed * Time.deltaTime;
+        if (_speed!=0)
+            Camera.main.GetComponent<cameraController>().setOffset(playerOffset);
+        transform.localPosition += playerOffset;
         ClampPosition();
     }
 
     void ClampPosition()
     {
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
-        pos.x = Mathf.Clamp(pos.x, 0.1f, 0.9f);//Mathf.Clamp01(pos.x);
-        pos.y = Mathf.Clamp(pos.y, 0.1f, 0.9f);//Mathf.Clamp01(pos.y);
+        pos.x = Mathf.Clamp(pos.x, 0.33f, 0.66f);//Mathf.Clamp01(pos.x);
+        pos.y = Mathf.Clamp(pos.y, 0.33f, 0.66f);//Mathf.Clamp01(pos.y);
         transform.position = Camera.main.ViewportToWorldPoint(pos);
     }
 

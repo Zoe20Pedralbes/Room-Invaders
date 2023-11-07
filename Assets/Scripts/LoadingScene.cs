@@ -27,6 +27,7 @@ public class LoadingScene : MonoBehaviour
 
             yield return null;
         }
+        //operation.allowSceneActivation = false;
 
     }
 }

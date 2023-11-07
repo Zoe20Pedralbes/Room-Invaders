@@ -69,7 +69,7 @@
                     "id": "1ba81cba-53bd-4455-9808-31ec1d06c174",
                     "path": "<Keyboard>/d",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "Scale",
                     "groups": "",
                     "action": "Horizontal",
                     "isComposite": false,
