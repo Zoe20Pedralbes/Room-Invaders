@@ -14,7 +14,7 @@ public class playerHealth : HealthBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Trigger");
+        //Debug.Log("Trigger");
         if (other.gameObject.CompareTag("eBullet"))
         {
             

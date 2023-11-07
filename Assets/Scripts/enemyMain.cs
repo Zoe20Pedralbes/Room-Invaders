@@ -18,6 +18,8 @@ public class enemyMain : MonoBehaviour
     void Start()
     {
         player = GameManager.gameManager.getPlayer();
+        Debug.Log("Padre de player: " + player.transform.parent);
+        this.gameObject.transform.SetParent(player.transform.parent);
         //animator = GetComponent<Animator>();
         //StartCoroutine(coroutineShoot());
     }
@@ -53,6 +55,8 @@ public class enemyMain : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log("Padre de player: "+player.transform.parent);
+        //this.gameObject.transform.SetParent(player.transform.parent);
         animator = GetComponent<Animator>();
         animator.SetInteger("Move", 1);
     }

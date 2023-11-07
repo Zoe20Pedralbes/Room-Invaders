@@ -21,7 +21,8 @@ public class enemyHealth : HealthBehaviour
         {
             OnEnemyDie.Invoke(enemyScore);
 
-            Destroy(this.gameObject, destroyDelay);
+            //Destroy(this.gameObject, destroyDelay);
+            this.gameObject.SetActive(false);
         }
             
     }
