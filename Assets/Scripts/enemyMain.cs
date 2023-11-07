@@ -17,9 +17,7 @@ public class enemyMain : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameManager.gameManager.getPlayer();
-        Debug.Log("Padre de player: " + player.transform.parent);
-        this.gameObject.transform.SetParent(player.transform.parent);
+        this.OnEnable();
         //animator = GetComponent<Animator>();
         //StartCoroutine(coroutineShoot());
     }
@@ -55,8 +53,8 @@ public class enemyMain : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("Padre de player: "+player.transform.parent);
-        //this.gameObject.transform.SetParent(player.transform.parent);
+        player = GameManager.gameManager.getPlayer();
+        this.gameObject.transform.SetParent(player.transform.parent);
         animator = GetComponent<Animator>();
         animator.SetInteger("Move", 1);
     }
