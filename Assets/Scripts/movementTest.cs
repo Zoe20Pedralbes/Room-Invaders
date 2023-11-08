@@ -28,7 +28,7 @@ public class movementTest : MonoBehaviour
         playerModel = transform.GetChild(0);
         actionUp = movementActions.FindActionMap("movement").FindAction("Up");
         actionHorizontal = movementActions.FindActionMap("movement").FindAction("Horizontal");
-        audioManager.AudioManager.PlayOneShot(FMODEvents.instance.playerTakeOff, transform.position);
+        //audioManager.AudioManager.PlayOneShot(FMODEvents.instance.playerTakeOff, transform.position);
 
     }
 

@@ -18,7 +18,7 @@ public class Bullet : damageBehaviour
     private void Start()
     {
         lifeTime = initialLifeTime;
-        audioManager.AudioManager.PlayOneShot(FMODEvents.instance.bulletShot, this.transform.position);
+        //audioManager.AudioManager.PlayOneShot(FMODEvents.instance.bulletShot, this.transform.position);
     }
 
     // Update is called once per frame
@@ -38,8 +38,8 @@ public class Bullet : damageBehaviour
     {
         this.pool.ToPool(this.gameObject);
         this.gameObject.SetActive(false);
-        GameObject expl = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        Destroy(expl, .4f);
+        //GameObject expl = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        //Destroy(expl, .4f);
     }
 
     public void SetDirection(Vector3 direction, Transform spawnPoint)
@@ -66,7 +66,7 @@ public class Bullet : damageBehaviour
     private void OnEnable()
     {
         lifeTime = initialLifeTime;
-        audioManager.AudioManager.PlayOneShot(FMODEvents.instance.bulletShot, this.transform.position);
+        //audioManager.AudioManager.PlayOneShot(FMODEvents.instance.bulletShot, this.transform.position);
     }
 
     private void OnDisable()

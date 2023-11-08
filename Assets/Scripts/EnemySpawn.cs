@@ -13,6 +13,7 @@ public class EnemySpawn : MonoBehaviour
         {
             enemies[i].SetActive(true);
             enemies[i].transform.position = spawnPoint[i].position;
+            //enemies[i].transform.rotation = spawnPoint[i].rotation;
         }
     }
 
