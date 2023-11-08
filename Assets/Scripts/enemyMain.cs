@@ -33,8 +33,8 @@ public class enemyMain : MonoBehaviour
     }
     public void startShoot()
     {
-        InvokeRepeating("Shoot", startShootingTime, repeatingTime);
-        startShooting=true;
+        //InvokeRepeating("Shoot", startShootingTime, repeatingTime);
+        //startShooting=true;
     }
     void Shoot()
     {
@@ -61,7 +61,7 @@ public class enemyMain : MonoBehaviour
     void StartShooting() //Llamarse desde un evento al final de la animación de moverse.
     {
         bulletPool = new ObjectPooler(4, bulletPrefab, bulletTag);
-        InvokeRepeating("Shoot", 1, .5f);
+        InvokeRepeating("Shoot", startShootingTime, repeatingTime);
     }
 
 }
