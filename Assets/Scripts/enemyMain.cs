@@ -35,13 +35,14 @@ public class enemyMain : MonoBehaviour
     }
     public void startShoot()
     {
-        InvokeRepeating("Shoot", startShootingTime, repeatingTime);
-        startShooting=true;
+        /*InvokeRepeating("Shoot", startShootingTime, repeatingTime);
+        startShooting=true;*/
     }
     void Shoot()
     {
         GameObject bullet = bulletPool.GetObject();
         //bullet.gameObject.tag = bulletTag;
+        startShooting = true;
         Debug.Log("Shooting");
         Debug.Log(bullet.active);
         bullet.GetComponent<Bullet>().setDamage(this.gameObject.GetComponent<damageBehaviour>().getDamage());
@@ -63,7 +64,7 @@ public class enemyMain : MonoBehaviour
     void StartShooting() //Llamarse desde un evento al final de la animación de moverse.
     {
         bulletPool = new ObjectPooler(4, bulletPrefab, bulletTag);
-        InvokeRepeating("Shoot", 1, .5f);
+        InvokeRepeating("Shoot", startShootingTime, repeatingTime);
     }
 
 }
