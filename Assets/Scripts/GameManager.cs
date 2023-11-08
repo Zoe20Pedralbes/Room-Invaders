@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Animator> HealthUiAnimations;
     [SerializeField]
     int _score = 0;
+    [SerializeField] Camera staticCamera;
+    public Camera getStaticCamera()
+    {
+        return staticCamera;
+    }
 
     public void setPlayer(GameObject player) { this.player = player; }
     public GameObject getPlayer() { return player; }
