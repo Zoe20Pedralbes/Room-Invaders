@@ -45,6 +45,7 @@ public class enemyMain : MonoBehaviour
         bullet.GetComponent<TrailRenderer>().enabled = true;
         bullet.GetComponent<Bullet>().setDamage(this.gameObject.GetComponent<damageBehaviour>().getDamage());
         bullet.GetComponent<Bullet>().SetDirection(transform.forward, GetComponentInChildren<Transform>());
+        //bullet.GetComponent<Bullet>().speedMultiplier =0;
     }
     public void endShoot()
     {

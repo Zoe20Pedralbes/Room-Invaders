@@ -15,6 +15,10 @@ public class playerHealth : HealthBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Trigger");
+        if (other.gameObject.CompareTag("Final"))
+        {
+            GameManager.gameManager.winGame();
+        }
         if (other.gameObject.CompareTag("eBullet"))
         {
             
@@ -23,6 +27,7 @@ public class playerHealth : HealthBehaviour
                 getHit(damageBehaviour.getDamage());
             }
         }
+        
     }
 
 

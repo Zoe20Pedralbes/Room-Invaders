@@ -6,14 +6,16 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager = null;
     [SerializeField] private GameObject player;
     [SerializeField] private int playerLife = 5;
-    private GameObject loseGameOver, winGameOver;
+    [SerializeField] private GameObject loseGameOver, winGameOver;
     public TextMeshProUGUI scoreText;
+    [SerializeField] private Text userNameText;
     [SerializeField] private List<Animator> HealthUiAnimations;
     [SerializeField]
     int _score = 0;
@@ -28,7 +30,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
         if (gameManager == null)
         {
             gameManager = this;
@@ -40,9 +41,9 @@ public class GameManager : MonoBehaviour
         {
             player.GetComponent<playerHealth>().maxHealth = playerLife;
         }
-
+        Time.timeScale = 1f;
+        recargarParametros();
     }
-
     public int getMaxLife()
     {
         return playerLife;
@@ -69,17 +70,46 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+        
         Debug.Log("GameOver");
-        audioManager.AudioManager.PlayOneShot(FMODEvents.instance.gameOverSound, player.transform.position);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        loseGameOver.SetActive(true);
+        winGameOver.SetActive(false);
+        Time.timeScale = 0f;
+        //audioManager.AudioManager.PlayOneShot(FMODEvents.instance.gameOverSound, player.transform.position);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         // winGameOver.SetActive(false);
         // loseGameOver.SetActive(true);
+    }
+    public void Retry()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    }
+    void recargarParametros()
+    {
+        loseGameOver = GameObject.FindGameObjectsWithTag("GameOver")[0];
+        winGameOver = GameObject.FindGameObjectsWithTag("HighScore")[0];
+        scoreText = GameObject.FindGameObjectsWithTag("ScoreText")[0].GetComponent<TextMeshProUGUI>();
+        userNameText = GameObject.FindGameObjectsWithTag("userNameText")[0].GetComponent<Text>();
+        foreach (var corazon in GameObject.FindGameObjectsWithTag("Corazon"))
+        {
+            HealthUiAnimations.Add(corazon.GetComponent<Animator>());
+        }
+        staticCamera = Camera.allCameras[1];
+    }
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
     }
 
     public void winGame()
     {
-        loseGameOver.SetActive(true);
-        winGameOver.SetActive(false);
+        Time.timeScale = 0;
+        loseGameOver.SetActive(false);
+        winGameOver.SetActive(true);
     }
 
     void checkRanking()
@@ -100,6 +130,7 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         enemyHealth.OnEnemyDie += Score;
+        //SceneManager.sceneLoaded += OnSceneLoaded;        
     }
 
     private void GetInformation()
@@ -118,14 +149,15 @@ public class GameManager : MonoBehaviour
             Debug.Log("User: " + p.name + " score: " + p.score);
         }
     }
-    private void sendInformation()
+    public void sendInformation()
     {
         StartCoroutine(cSendInformation());
+        SceneManager.LoadScene(2);
     }
     IEnumerator cSendInformation()
     {
         WWWForm form = new WWWForm();
-        form.AddField("playerName", scoreText.text);
+        form.AddField("playerName", userNameText.text);
         form.AddField("score", _score);
         UnityWebRequest www = UnityWebRequest.Post("http://roominvaders.ddns.net/insert.php", form);
         yield return www.SendWebRequest();
