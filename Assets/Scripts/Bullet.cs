@@ -74,7 +74,8 @@ public class Bullet : damageBehaviour
         TrailRenderer trailRenderer = this.GetComponent<TrailRenderer>();
         trailRenderer.enabled = false;
         trailRenderer.Clear();
-        this.transform.position = spawnPoint.position;
+        if (spawnPoint != null)
+            this.transform.position = spawnPoint.position;
     }
 
 }

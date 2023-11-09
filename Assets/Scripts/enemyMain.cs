@@ -42,6 +42,7 @@ public class enemyMain : MonoBehaviour
         //bullet.gameObject.tag = bulletTag;
         Debug.Log("Shooting");
         Debug.Log(bullet.active);
+        bullet.GetComponent<TrailRenderer>().enabled = true;
         bullet.GetComponent<Bullet>().setDamage(this.gameObject.GetComponent<damageBehaviour>().getDamage());
         bullet.GetComponent<Bullet>().SetDirection(transform.forward, GetComponentInChildren<Transform>());
     }
