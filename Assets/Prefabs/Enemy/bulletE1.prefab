@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: -5990742731116810287}
   - component: {fileID: -4231241236850862833}
   - component: {fileID: 5255063322373960854}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: bulletE1
-  m_TagString: pBullet
+  m_TagString: eBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -401,6 +401,10 @@ PrefabInstance:
     - target: {fileID: 7549430752707040364, guid: 31ede3a23f784ac43b63c54b94dddf74, type: 3}
       propertyPath: m_Name
       value: Particle System
+      objectReference: {fileID: 0}
+    - target: {fileID: 7549430752707040364, guid: 31ede3a23f784ac43b63c54b94dddf74, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7549430752707040364, guid: 31ede3a23f784ac43b63c54b94dddf74, type: 3}
       propertyPath: m_IsActive

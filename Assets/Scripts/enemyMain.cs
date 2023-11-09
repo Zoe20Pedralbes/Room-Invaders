@@ -21,7 +21,7 @@ public class enemyMain : MonoBehaviour
         //animator = GetComponent<Animator>();
         //StartCoroutine(coroutineShoot());
     }
-    void Update()
+    void LateUpdate()
     {
         transform.LookAt(player.transform, Vector3.up);
         if (startShooting)

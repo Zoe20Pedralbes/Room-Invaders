@@ -8,7 +8,7 @@ public class enemyHealth : HealthBehaviour
 {
     [SerializeField]
     protected EventReference HealthDie;
-    protected int enemyScore = 1;
+    protected int enemyScore = 5;
     protected override void getHit(int dmg)
     {
         actualHealth = actualHealth - dmg;
