@@ -66,7 +66,7 @@ public class Bullet : damageBehaviour
     private void OnEnable()
     {
         lifeTime = initialLifeTime;
-        //audioManager.AudioManager.PlayOneShot(FMODEvents.instance.bulletShot, this.transform.position);
+        audioManager.AudioManager.PlayOneShot(FMODEvents.instance.bulletShot, this.transform.position);
     }
 
     private void OnDisable()

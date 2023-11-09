@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
         loseGameOver.SetActive(true);
         winGameOver.SetActive(false);
         Time.timeScale = 0f;
-        //audioManager.AudioManager.PlayOneShot(FMODEvents.instance.gameOverSound, player.transform.position);
+        audioManager.AudioManager.PlayOneShot(FMODEvents.instance.gameOverSound, player.transform.position);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         // winGameOver.SetActive(false);
         // loseGameOver.SetActive(true);

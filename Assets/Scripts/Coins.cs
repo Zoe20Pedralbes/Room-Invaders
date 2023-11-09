@@ -13,7 +13,7 @@ public class Coins : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             GameManager.gameManager.Score(points);
-            //audioManager.AudioManager.PlayOneShot(FMODEvents.instance.coinCollected, transform.position);
+            audioManager.AudioManager.PlayOneShot(FMODEvents.instance.coinCollected, transform.position);
             Destroy(this.gameObject);
         }
         
