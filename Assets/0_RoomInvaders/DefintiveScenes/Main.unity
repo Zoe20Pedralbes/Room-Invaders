@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2511.1494, g: 2464.62, b: 2707.5522, a: 1}
+  m_IndirectSpecularColor: {r: 2510.8975, g: 2464.1826, b: 2706.5356, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -535,7 +535,6 @@ MonoBehaviour:
   m_Script: {fileID: 2106575682}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &75405497
 Transform:
   m_ObjectHideFlags: 19
@@ -1301,6 +1300,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
@@ -2163,6 +2166,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
       value: 1
       objectReference: {fileID: 0}
@@ -3009,6 +3016,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
       value: 1
       objectReference: {fileID: 0}
@@ -3301,6 +3312,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
@@ -4251,7 +4266,6 @@ MonoBehaviour:
   m_Script: {fileID: 2106575682}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries: []
 --- !u!4 &394466281
 Transform:
   m_ObjectHideFlags: 19
@@ -4649,6 +4663,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
@@ -6038,6 +6056,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
       value: 1
       objectReference: {fileID: 0}
@@ -6434,6 +6456,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
       value: 1
       objectReference: {fileID: 0}
@@ -6582,6 +6608,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
@@ -7110,6 +7140,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
@@ -8881,6 +8915,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
       value: 1
       objectReference: {fileID: 0}
@@ -10178,6 +10216,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
@@ -11928,6 +11970,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
       value: 1
       objectReference: {fileID: 0}
@@ -12580,6 +12626,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
@@ -13634,6 +13684,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
@@ -14709,6 +14763,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
@@ -19806,6 +19864,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
       value: 3
       objectReference: {fileID: 0}
@@ -20080,6 +20142,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
@@ -20793,8 +20859,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -20924,6 +20990,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
@@ -25271,6 +25341,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
       value: 3
       objectReference: {fileID: 0}
@@ -25626,6 +25700,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
       value: 3
       objectReference: {fileID: 0}
@@ -25968,6 +26046,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
@@ -27017,6 +27099,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
       value: 3
       objectReference: {fileID: 0}
@@ -27792,6 +27878,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
       value: 1
       objectReference: {fileID: 0}
@@ -28329,6 +28419,10 @@ PrefabInstance:
     - target: {fileID: 34825446587057059, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
+      propertyPath: repeatingTime
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 245045852607372736, guid: 41f995b972cc00a4e8398e43d41f29c6, type: 3}
       propertyPath: waitTimeToLeave
